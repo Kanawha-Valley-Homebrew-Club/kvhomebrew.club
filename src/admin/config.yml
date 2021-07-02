@@ -44,19 +44,40 @@ collections:
   - label: "Event"
     name: "event"
     folder: "src/events"
+    slug: "{{year}}/{{month}}/{{slug}}"
     create: true
     editor:
-      preview: false
+      preview: true
     fields:
      - { label: "Title", name: "title", widget: "string" }
      - { label: "Subtitle", name: "subtitle", widget: "string" }
-     - { label: "Date", name: "date",   widget: "datetime", default: "", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL", picker_utc: false }
-     - { label: "Location", name: "location", widget: "markdown", editor_components: [] }
+     - { label: "Date", name: "date", widget: "datetime", default: "", date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
+     - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
      - { label: "Featured Image", name: "image", widget: "image", required: false }
-     - { label: "Stream Embed", name: "stream", widget: "code" }
+     - { label: "Stream Embed", name: "stream", widget: "code", allow_language_selection: false, output_code_only: true, required: false }
      - { label: "Body", name: "body", widget: "markdown" }
-     - { label: "Guests", name: "guests", widget: "markdown", editor_components: [] }
-     - { label: "Resource", name: "resources", widget: "markdown", editor_components: [] }
+     - { label: "Guests", name: "guests", widget: "markdown", editor_components: [], buttons: ["link"] }
+     - { label: "Resource", name: "resources", widget: "markdown", editor_components: [], buttons: ["link"] }
+  - label: "Recipe"
+    name: "recipe"
+    folder: "src/recipes"
+    create: true
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Style", name: "style", widget: "string" }
+      - { label: "ABV", name: "abv", widget: "number", value_type: "float" }
+      - { label: "IBU", name: "ibu", widget: "number", value_type: "int" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - label: "Recipe Export"
+        name: "recipe_export"
+        widget: "file"
+        media_library:
+          media_folder: "src/recipes/uploads"
+          config:
+            multiple: false
   - label: "Settings"
     name: "settings"
     editor:
@@ -90,6 +111,5 @@ collections:
         name: "settings"
         file: "src/_data/settings.yaml"
         fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+          - { label: Site Name, name: site_name, widget: string }
+          - { label: Site Slogan, name: site_slogan, widget: string }
