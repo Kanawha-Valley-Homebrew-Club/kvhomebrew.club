@@ -1,9 +1,16 @@
-<footer class="{{ 'fixed' if path == 'home' }} bottom-0 text-center w-full py-4">
-    <small class="text-gray-500">Copyright ©
-        {{settings.name}}
-        2020. Made with ❤ by
-        <a href="{{settings.url}}" target="_blank" class="underline">{{settings.author}}</a>
-        •
-        <a href="https://github.com/surjithctly/neat-starter" class="underline" target="_blank" rel="noopener">View on Github</a>
-    </small>
+<footer class="text-center w-full py-4">
+
+    {% if navigation.items %}
+    <nav>
+        <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
+            {% for item in navigation.items %}
+                <li class="nav__item mr-3">
+                    <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+
+    <small class="text-gray-500">Copyright © {{settings.site_name}}</small>
 </footer>
