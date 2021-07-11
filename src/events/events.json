@@ -1,5 +1,5 @@
 {
-    "layout": "events",
+    "layout": "events--full",
     "tags": [
         "event"
     ]

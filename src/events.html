@@ -1,0 +1,37 @@
+---
+title: Upcoming Events
+subtitle: Join us for an upcoming event!
+header: false
+container: false
+layout: page
+---
+{%- from "system/component.html" import component -%}
+<section class="py-14">
+    {% set theme = 'light' %}
+    <div class="max-w-4xl mx-auto">
+        {{ component('titlebar', { title: title, subtitle: subtitle }) }}
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-10 mb-10">
+            {% set futureEvents = collections.event | futureDates %}
+            {% for event in futureEvents %}
+                {% include 'events--teaser.html' %}
+            {% endfor %}
+        </div>
+
+        {% include 'blocks/subscribe.html' %}
+    </div>
+</section>
+
+<section class="py-14 bg-black text-white">
+    {% set theme = 'dark' %}
+    <div class="max-w-4xl mx-auto">
+        {{ component('titlebar', { title: 'Past Events', subtitle: 'Explore notes and videos from past events.', textSize: '5xl' }) }} 
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-10 mb-10">
+            {% set pastEvents = collections.event | pastDates %}
+            {% for event in pastEvents %}
+                {% include 'events--teaser.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

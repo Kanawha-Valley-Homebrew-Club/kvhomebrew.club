@@ -1,0 +1,27 @@
+{%- from "system/component.html" import component -%}
+<article class="mb-8">
+    <div class="mb-2"><a href="{{ recipe.url | url }}"><img src="{{ recipe.data.image }}" /></a></div>
+    <div class="text-sm font-bold text-lime">{{ recipe.data.style }}</div>
+    <h1 class="text-2xl mb-1">
+        <a href="{{ recipe.url | url }}">
+            {% if recipe.data.title %}
+                {{ recipe.data.title }}
+            {% else %}
+                Mystery Beer
+            {% endif %}
+        </a>
+    </h1>
+    <div class="flex text-xs">
+        {{ component('datatag', { 
+            label: 'ABV:', 
+            data: recipe.data.abv + '%',
+            class: 'mr-2'
+        }) }}
+
+        {{ component('datatag', { 
+            label: 'IBU:', 
+            data: recipe.data.ibu,
+            class: 'mr-2'
+        }) }}
+    </div>
+</article>

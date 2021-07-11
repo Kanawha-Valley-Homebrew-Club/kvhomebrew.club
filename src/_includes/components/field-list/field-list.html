@@ -1,0 +1,8 @@
+<div class="mb-4 {{ params.fieldClasses }}">
+    <h2 class="font-body font-bold">{{ params.label }}</h2>
+    <{{ params.listType }} class="{{ params.listClasses }}">
+    {% for item in params.items %}
+        <li>{{ params.template }}</li>
+    {% endfor %}
+    </{{ params.listType }}>
+</div>
