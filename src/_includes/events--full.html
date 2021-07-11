@@ -1,0 +1,70 @@
+---
+layout: page
+header: false
+container: false
+---
+{%- from "system/component.html" import component -%}
+<article>
+    <div class="container">
+        <header class="grid lg:grid-cols-3 gap-10 py-14">
+            <div class="col-span-2">
+                {{ component('button', { url: '/events', text: '&larr; Events', theme: 'left-arrow' }) }}
+                <h1 class="text-5xl">
+                {% if title %}
+                    {{ title }}
+                {% else %}
+                    <abbr title="To Be Determined">TBD</abbr>
+                {% endif %}
+                </h1>
+                {% if subtitle %}
+                <p class="mb-4 text-xl">{{ subtitle }}</p>
+                {% endif %}
+            </div>
+            <div>
+                {{ component('datebox', { date: date }) }}
+                {{ location }}
+            </div>
+        </header>
+    </div>
+
+    {% if youtubeId or image %}
+    <div class="bg-black">
+        <div class="container">
+        {% if youtubeId %}
+            {% set videoId = youtubeId %}
+            {% set videoTitle = title %}
+            {% include 'blocks/youtube.html' %}
+        {% elseif image %}
+            <img src="{{ image }}nf_resize=smartcrop&w=300&h=300" />
+        {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container">
+    <div class="grid lg:grid-cols-3 gap-10 py-10">
+        <div class="col-span-2 mb-5">
+            <div class="mb-5">
+            {{ content | safe }}
+            </div>
+            {% include 'blocks/sharing.html' %}
+        </div>
+
+        <div class="mb-5">
+            {{ component('field-list', { 
+                label: 'Guests', 
+                listType: 'ol', 
+                items: guests, 
+                template: '{{ item.name }}: {{ item.website }}' 
+            }) }}
+
+            {{ component('field-list', { 
+                label: 'Resources', 
+                listType: 'ol', 
+                items: resources, 
+                template: '{{ item.title }}: {{ item.url }}' 
+            }) }}
+        </div>
+    </div>
+    </div>
+</article>

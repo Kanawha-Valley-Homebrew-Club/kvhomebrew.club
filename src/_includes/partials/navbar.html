@@ -1,9 +1,14 @@
-<div class="w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+{%- from "system/component.html" import component -%}
+
+{% set classes = 'relative bg-hops is-notfixed pt-6 pl-6 pr-6 pb-10' %}
+{% if fixed_navbar == true %}
+    {% set classes = 'absolute is-fixed p-6' %}
+{% endif %}
+<div id="navbar" class="w-full text-white {{ classes }}">
+    <nav class="flex items-center justify-center lg:justify-between flex-wrap lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
         <!--Logo etc-->
         <div class="flex items-center">
-            <a href="/" class="text-indigo-500 font-bold text-lg">
-                Logo</a>
+            {% include 'blocks/logo.html' %}
         </div>
 
         <!--Toggle button (hidden on large screens)-->
@@ -15,18 +20,22 @@
         </button>
 
         <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
-
+        <div class="flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
             {% if navigation.items %}
-
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
+                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-center flex-1 items-center font-display text-xl">
                     {% for item in navigation.items %}
-                        <li class="nav__item mr-3">
-                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
-                        </li>
+                    <li class="nav__item mr-3">
+                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                    </li>
                     {% endfor %}
                 </ul>
+            {% endif %}
+        </div>
 
+        <!-- Call to Action -->
+        <div class="flex-shrink">
+            {% if cta_link.cta_url %}
+            <div>{{ component('button', { url: cta_link.cta_url, text: cta_link.cta_text }) }}</div>
             {% endif %}
         </div>
     </nav>

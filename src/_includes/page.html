@@ -1,0 +1,19 @@
+---
+title: Page Title
+subtitle: Subtitle
+layout: default
+header: true
+container: true
+---
+{%- from "system/component.html" import component -%}
+{% if container %}
+<div class="container px-4 py-14">
+{% endif %}
+    {% if header %}
+    {{ component('titlebar', { title: title, subtitle: subtitle }) }}
+    {% endif %}
+
+    {{ content | safe }}
+{% if container %}
+</div>
+{% endif %}
