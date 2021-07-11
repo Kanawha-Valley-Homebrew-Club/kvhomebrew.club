@@ -10,11 +10,51 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
+  // Filters for future dates in Events.
+  eleventyConfig.addFilter("futureDates", (events) => {
+    return events.filter((event) => {
+      const eventDate = new Date(event.data.date);
+
+      if (eventDate.getTime() >= Date.now()) {
+        return event;
+      }
+    });
+  });
+
+  // Filters for past dates in Events.
+  eleventyConfig.addFilter("pastDates", (events) => {
+    return events.filter((event) => {
+      const eventDate = new Date(event.data.date);
+
+      if (eventDate.getTime() < Date.now()) {
+        return event;
+      }
+    });
+  })
+
   // human readable date
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
+  eleventyConfig.addFilter("event_day", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "America/New_York" }).toFormat(
+      "d"
     );
+  });
+
+  eleventyConfig.addFilter("event_month", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "est" }).toFormat(
+      "LLLL"
+    );
+  });
+
+  eleventyConfig.addFilter("event_year", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "est" }).toFormat(
+      "yyyy"
+    );
+  });
+
+  eleventyConfig.addFilter("event_time", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "est" }).toFormat(
+      "t"
+    ).toLowerCase().replace(/\s/g, "");
   });
 
   // Syntax Highlighting for Code blocks
@@ -30,6 +70,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
+    "./node_modules/lite-youtube-embed/src/lite-yt-embed.css": "./static/css/lite-yt-embed.css",
+    "./node_modules/lite-youtube-embed/src/lite-yt-embed.js": "./static/js/lite-yt-embed.js",
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
   });
@@ -39,6 +81,9 @@ module.exports = function (eleventyConfig) {
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+
+  // Get the current year
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
