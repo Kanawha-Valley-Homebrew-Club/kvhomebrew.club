@@ -1,0 +1,9 @@
+{% switch params.theme %}
+  {% case 'left-arrow' %}
+    {% set classes = 'inline-block font-body font-bold' %}
+  {% case 'black' %}
+    {% set classes = 'inline-block py-2 px-4 rounded-full font-display font-normal text-sm text-white bg-black' %}
+  {% default %}
+    {% set classes = 'inline-block py-2 px-4 rounded-full font-display font-normal text-sm text-white bg-orange' %}
+{% endswitch %}
+<a href="{{ params.url }}" class="{{ classes }}">{{ params.text | safe }}</a>
