@@ -1,0 +1,13 @@
+---
+title: Club Recipes
+subtitle: Members share their personal recipes.
+layout: page
+---
+<section class="">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% set recipes = collections.recipe %}
+    {% for recipe in recipes %}
+        {% include 'recipe--teaser.html' %}
+    {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,8 @@
+<figure>
+  {{ params.media | safe }}
+  {% if params.caption %}
+  <figcaption>
+    <p class="text-center italic opacity-75">{{ params.caption | safe }}</p>
+  </figcaption>
+  {% endif %}
+</figure>

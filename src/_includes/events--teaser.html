@@ -1,0 +1,26 @@
+{%- from "system/component.html" import component -%}
+{% if theme == 'dark' %}
+{% set themeClasses = "border-white" %}
+{% else %}
+{% set themeClasses = "border-black" %}
+{% endif %}
+<article class="p-4 mt-6 border-thin border-opacity-25 rounded-md {{ themeClasses }}">
+    <div class="-mt-10 mb-4">
+        {{ component('datebox', { date: event.date }) }}
+    </div>
+    <header>
+        <h1 class="text-2xl">
+            <a href="{{ event.url | url }}">
+                {% if event.data.title %}
+                    {{ event.data.title }}
+                {% else %}
+                    Untitled
+                {% endif %}
+            </a>
+        </h1>
+        <p class="mb-4 text-lg">{{ event.data.subtitle }}</p>
+    </header>
+    <p>
+        {{ component('button', { url: event.url | url, text: 'Details' }) }}
+    </p>
+</article>

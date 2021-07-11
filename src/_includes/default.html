@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
+    <title>{{title}}</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Meta Tags -->
     {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
@@ -17,10 +20,15 @@
     {% endif %}
   </head>
   <body>
+    {% if system.maintenance_mode == true %}
+    {% include "./partials/construction.html" %}
+    {% endif %}
+
     {% include "./partials/navbar.html" %}
 
     {{ content | safe }}
 
+    {% include "./partials/prefooter.html" %}
     {% include "./partials/footer.html" %}
 
     <script src="/static/js/alpine.js"></script>

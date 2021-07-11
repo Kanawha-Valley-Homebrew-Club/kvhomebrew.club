@@ -1,15 +1,18 @@
 ---
+stream: https://www.youtube.com/watch?v=Wcr3bEWPHtY
 title: Club Cookout & Competition
 subtitle: Summer is here!
-date: 2021-06-12T00:20:34.491Z
-location: <https://meetings.zoom.com/e/15698433262498>
+date: 2021-07-24T00:20:34.491Z
+location: "[Zoom Meeting](https://meetings.zoom.com/e/15698433262498)"
 image: https://cdn.stamped.io/tr:h-800,/uploads/photos/103641_11429894862_1f71e89a_d1f4_40b3_b7e1_2b9dad914957.jpg?
-stream: ""
-guests: |-
-  Aaron Silber
-
-  [Bobby Brown](http://google.com)
-resources: "[Bru'N Water Spreadsheet](https://www.brunwater.com/)"
+youtubeId: Wcr3bEWPHtY
+guests:
+  - name: John Smith
+    website: https://google.com
+  - name: Jane Does
+resources:
+  - title: Event Resouce
+    url: https://google.com
 ---
 Ut et orci nec leo ultrices tempor eu et libero. Vestibulum vel suscipit lorem, blandit euismod felis. Cras bibendum ultrices purus, viverra elementum enim euismod vitae. Fusce at dolor eget eros gravida volutpat. Nulla imperdiet rutrum mollis. Donec ex nunc, facilisis non neque at, laoreet accumsan ante. Vestibulum pulvinar orci pharetra, sodales velit pharetra, volutpat enim. Integer rutrum facilisis ex, non ornare purus interdum aliquet. Morbi pulvinar nibh at ultrices egestas. 
 

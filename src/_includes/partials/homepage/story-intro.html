@@ -1,17 +1,18 @@
-<section class="py-40 bg-gray-300">
-  <div class="container">
-    <div class="grid grid-cols-2">
-      <div>
-        <h1>Brew Awesome Beer</h1>
-        <p>The KVHC was founded in 2018 to bring together people who carry on the old traditions of crafting great beer at home.</p>
-        <p>Our members’ expertise ranges from seasoned brewers with 30+ years of experience to those who are looking for a more guided approach to learning the craft from the beginning.</p>
+{%- from "system/component.html" import component -%}
+<section class="py-20 bg-black text-white" id="story-intro">
+  <div class="container px-4">
+    <div class="grid lg:grid-cols-2 gap-10">
+      <div class="flex flex-col justify-center">
+        <h1 class="mb-10 text-5xl text-lime text-center lg:text-left">Brew Awesome Beer</h1>
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
+          <p class="font-display text-xl">The KVHC was founded in 2018 to bring together people who carry on the old traditions of crafting great beer at home.</p>
+          <p class="text-lg">Our members’ expertise ranges from seasoned brewers with 30+ years of experience to those who are looking for a more guided approach to learning the craft from the beginning.</p>
+        </div>
       </div>
-      <figure>
-        <figcaption>
-          <img src="https://placebeer.com/775/430" />
-          <p>KVHC members gather for events like Big Brew Day. Timlapse pictured here in 2021.</p>
-        </figcaption>
-      </figure>
+      {{ component('figure', { 
+        media: '<img src="https://placebeer.com/775/430" class="mb-4 shadow-offset-white" />',
+        caption: 'KVHC members gather for events like Big Brew Day. Timlapse pictured here in 2021.' 
+      }) }}
     </div>
   </div>
 </section>
