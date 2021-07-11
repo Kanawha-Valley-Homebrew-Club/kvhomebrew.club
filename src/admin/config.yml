@@ -12,24 +12,6 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  # - label: "Blog"
-  #   name: "blog"
-  #   folder: "src/posts"
-  #   create: true
-  #   editor:
-  #     preview: false
-  #   fields:
-  #     - { label: "Title", name: "title", widget: "string" }
-  #     - { label: "Description", name: "description", widget: "string" }
-  #     - { label: "Author", name: "author", widget: "string" }
-  #     - { label: "Publish Date", name: "date", widget: "datetime" }
-  #     - { label: "Body", name: "body", widget: "markdown" }
-  #     - widget: select
-  #       label: "tags"
-  #       name: "tags"
-  #       multiple: true
-  #       create: true
-  #       options: ["Tags", "created", "from", "config.yml"]
   - label: "Basic Page"
     name: "page"
     folder: "src/pages"
@@ -54,10 +36,24 @@ collections:
      - { label: "Date", name: "date", widget: "datetime", default: "", date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
      - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
      - { label: "Featured Image", name: "image", widget: "image", required: false }
-     - { label: "Stream Embed", name: "stream", widget: "code", allow_language_selection: false, output_code_only: true, required: false }
+     - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }
      - { label: "Body", name: "body", widget: "markdown" }
-     - { label: "Guests", name: "guests", widget: "markdown", editor_components: [], buttons: ["link"] }
-     - { label: "Resource", name: "resources", widget: "markdown", editor_components: [], buttons: ["link"] }
+     - label: Guests
+       name: guests
+       widget: list
+       allow_add: true
+       collapsed: true
+       fields:
+         - { label: Name, name: name, widget: string }
+         - { label: Website, name: website, widget: string, required: false }
+     - label: Resources
+       name: resources
+       widget: list
+       allow_add: true
+       collapsed: true
+       fields:
+         - { label: Title, name: title, widget: string }
+         - { label: URL, name: url, widget: string }
   - label: "Recipe"
     name: "recipe"
     folder: "src/recipes"
@@ -95,21 +91,21 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
+      - label: "Call to Action Link"
+        name: "cta_link"
+        file: "src/_data/cta_link.yaml"
         fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
+          - { label: CTA Link Text, name: cta_text, widget: string }
+          - { label: CTA Link URL, name: cta_url, widget: string }
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
         fields:
           - { label: Site Name, name: site_name, widget: string }
           - { label: Site Slogan, name: site_slogan, widget: string }
+      - label: "System Settings"
+        name: "system"
+        file: "src/_data/system.yaml"
+        fields:
+          - { label: "Maintenance Mode", name: maintenance_mode, widget: boolean }
+          - { label: "Maintenance Mode Message", name: maintenance_message, widget: text, required: false }
