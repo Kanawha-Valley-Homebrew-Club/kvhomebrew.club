@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const markdownIt = require('markdown-it');
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -9,6 +10,11 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+
+  // Render markdown to html
+  eleventyConfig.addFilter("markdown", (content) => {
+    return markdownIt({ html: true }).render(content);
+  });
 
   // Filters for future dates in Events.
   eleventyConfig.addFilter("futureDates", (events) => {
