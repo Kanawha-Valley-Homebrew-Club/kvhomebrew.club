@@ -5,11 +5,13 @@ container: false
 ---
 {%- from "system/component.html" import component -%}
 <article>
-    <div class="container">
-        <header class="grid lg:grid-cols-3 gap-10 py-14">
-            <div class="col-span-2">
-                {{ component('button', { url: '/events', text: '&larr; Events', theme: 'left-arrow' }) }}
-                <h1 class="text-5xl">
+    <div class="container mx-auto max-w-5xl px-4">
+        <header class="grid md:grid-cols-3 gap-10 py-14">
+            <div class="md:col-span-2">
+                <div class="mb-4">
+                    {{ component('button', { url: '/events', text: '&larr; Events', theme: 'left-arrow' }) }}
+                </div>
+                <h1 class="text-5xl mb-4">
                 {% if title %}
                     {{ title }}
                 {% else %}
@@ -20,16 +22,21 @@ container: false
                 <p class="mb-4 text-xl">{{ subtitle }}</p>
                 {% endif %}
             </div>
-            <div>
-                {{ component('datebox', { date: date }) }}
-                {{ location }}
+            <div class="flex md:block grid-cols-2">
+                <div class="mb-4 mr-6">
+                    {{ component('datebox', { date: date }) }}
+                </div>
+                <div class="mb-4">
+                    {{ component('field-label', { label: 'Location' }) }}
+                    {{ location }}
+                </div>
             </div>
         </header>
     </div>
 
     {% if youtubeId or image %}
-    <div class="bg-black">
-        <div class="container">
+    <div class="bg-black bg-whitegrit">
+        <div class="mx-auto max-w-5xl px-4">
         {% if youtubeId %}
             {% set videoId = youtubeId %}
             {% set videoTitle = title %}
@@ -41,29 +48,37 @@ container: false
     </div>
     {% endif %}
 
-    <div class="container">
+    <div class="mx-auto max-w-5xl px-4">
     <div class="grid lg:grid-cols-3 gap-10 py-10">
         <div class="col-span-2 mb-5">
-            <div class="mb-5">
-            {{ content | safe }}
+            <div class="mb-6 text-lg">
+                {{ content | safe }}
             </div>
             {% include 'blocks/sharing.html' %}
         </div>
 
         <div class="mb-5">
-            {{ component('field-list', { 
-                label: 'Guests', 
-                listType: 'ol', 
-                items: guests, 
-                template: '{{ item.name }}: {{ item.website }}' 
-            }) }}
+            {% if guests %}
+            <div class="mb-6">
+                {{ component('field-label', { label: 'Special Guests' }) }}
+                <ol>
+                {% for guest in guests %}
+                    <li>{% if guest.website %}<a href="{{ guest.website }}" class="underline">{% endif %}{{ guest.name }}{% if guest.website %}</a>{% endif %}</li>
+                {% endfor %}
+                </ol>
+            </div>
+            {% endif %}
 
-            {{ component('field-list', { 
-                label: 'Resources', 
-                listType: 'ol', 
-                items: resources, 
-                template: '{{ item.title }}: {{ item.url }}' 
-            }) }}
+            {% if resources %}
+            <div>
+                {{ component('field-label', { label: 'Resources' }) }}
+                <ol>
+                {% for resource in resources %}
+                    <li>{% if resource.url %}<a href="{{ resource.url }}" class="underline">{% endif %}{{ resource.title }}{% if resource.url %}</a>{% endif %}</li>
+                {% endfor %}
+                </ol>
+            </div>
+            {% endif %}
         </div>
     </div>
     </div>
