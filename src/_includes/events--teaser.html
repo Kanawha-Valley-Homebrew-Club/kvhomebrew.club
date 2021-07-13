@@ -4,7 +4,7 @@
 {% else %}
 {% set themeClasses = "border-black" %}
 {% endif %}
-<article class="p-4 mt-6 border-thin border-opacity-25 rounded-md {{ themeClasses }}">
+<article class="p-4 mt-6 border-thin border-opacity-25 rounded-md text-center md:text-left {{ themeClasses }}">
     <div class="-mt-10 mb-4">
         {{ component('datebox', { date: event.date }) }}
     </div>
