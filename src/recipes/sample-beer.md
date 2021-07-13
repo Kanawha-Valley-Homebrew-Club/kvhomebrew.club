@@ -1,6 +1,6 @@
 ---
 title: Sample Beer
-image: https://cdn2.justwineapp.com/assets/article/2017/05/photo-pint-beer-free-stock-image-royalty-free-instagram-social-media.jpg
+image: /static/img/sample-beer-pilsner.jpeg
 style: Beer
 abv: 4.5
 ibu: 7
