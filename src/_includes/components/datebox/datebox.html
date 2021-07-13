@@ -1,10 +1,12 @@
-<time class="grid grid-cols-2 w-48">
-    <span class="p-2 flex items-center justify-center text-5xl font-display bg-lime text-white">
-        {{ params.date | event_day }}
-    </span>
-    <span class="p-2 font-display text-sm bg-pine text-white">
-        {{ params.date | event_month }}<br/>
-        {{ params.date | event_year }}<br/>
-        {{ params.date | event_time }}
-    </span>
+<time class="inline-block">
+    <div class="flex">
+        <span class="p-4 flex items-center justify-center text-5xl font-display bg-lime bg-hops-green-muted bg-cover text-white">
+            {{ params.date | event_day }}
+        </span>
+        <span class="p-4 font-display font-lg leading-5 text-left bg-pine text-white">
+            {{ params.date | event_month }}<br/>
+            {{ params.date | event_year }}<br/>
+            {{ params.date | event_time }}
+        </span>
+    </div>
 </time>
