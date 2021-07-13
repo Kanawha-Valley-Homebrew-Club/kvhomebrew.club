@@ -10,8 +10,12 @@ module.exports = {
   },
   theme: {
     backgroundImage:  {
-      'hops': "url('/static/img/hops.jpg')",
-      'hops-gradient': "linear-gradient(to top, rgba(146, 187, 5, 1), rgba(146, 187, 5, 0) ), url('/static/img/hops.jpg')",
+      'blackgrit': "url('/static/theme/blackgrit.png')",
+      'whitegrit': "url('/static/theme/whitegrit-2.png')",
+      'hops': "url('/static/theme/hops.jpg')",
+      'hops-green-grit': "url('/static/theme/hops-green-grit.jpg')",
+      'hops-green-muted': "url('/static/theme/hops-green-muted.jpg')",
+      'hops-gradient': "linear-gradient(to top, rgba(146, 187, 5, 1), rgba(146, 187, 5, 0) ), url('/static/theme/hops-green-grit.jpg')",
     },
     borderWidth: {
       'thin': '1px',
