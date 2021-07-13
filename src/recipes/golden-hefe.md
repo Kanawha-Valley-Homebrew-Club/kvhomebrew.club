@@ -1,5 +1,6 @@
 ---
 title: Golden Hefe
+image: /static/img/widmer-hefeweizen-12.jpg
 style: Hefewizen
 abv: 6.5
 ibu: 12
