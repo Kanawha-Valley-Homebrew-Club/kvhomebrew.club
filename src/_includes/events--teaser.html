@@ -10,7 +10,7 @@
     </div>
     <header>
         <h1 class="text-2xl">
-            <a href="{{ event.url | url }}">
+            <a href="{{ event.url | url }}" class="no-underline">
                 {% if event.data.title %}
                     {{ event.data.title }}
                 {% else %}

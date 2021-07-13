@@ -6,4 +6,4 @@
   {% default %}
     {% set classes = 'inline-block py-2 px-4 rounded-full font-bold text-white bg-orange hover:bg-orange_hover' %}
 {% endswitch %}
-<a href="{{ params.url }}" class="{{ classes }}">{{ params.text | safe }}</a>
+<a href="{{ params.url }}" class="{{ classes }} no-underline">{{ params.text | safe }}</a>
