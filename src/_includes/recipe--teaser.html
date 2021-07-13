@@ -1,9 +1,11 @@
 {%- from "system/component.html" import component -%}
 <article class="mb-8">
     {% if recipe.data.image %}
-    <div class="mb-2"><a href="{{ recipe.url | url }}" class="no-underline"><img src="{{ recipe.data.image }}?nf_resize=fit&w=100&h=50" /></a></div>
+    <div class="mb-2"><a href="{{ recipe.url | url }}" class="no-underline"><img src="{{ recipe.data.image }}?nf_resize=smartcrop&w=400&h=225" /></a></div>
     {% endif %}
+    {% if recipe.data.style %}
     <div class="text-md font-bold text-lime">{{ recipe.data.style }}</div>
+    {% endif %}
     <h1 class="text-3xl mb-1">
         <a href="{{ recipe.url | url }}" class="no-underline">
             {% if recipe.data.title %}
