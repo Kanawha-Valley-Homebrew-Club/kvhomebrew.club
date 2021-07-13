@@ -65,7 +65,7 @@ collections:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Style", name: "style", widget: "string" }
       - { label: "ABV", name: "abv", widget: "number", value_type: "float" }
       - { label: "IBU", name: "ibu", widget: "number", value_type: "int" }
