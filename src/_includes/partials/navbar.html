@@ -1,6 +1,6 @@
 {%- from "system/component.html" import component -%}
 
-{% set classes = 'relative bg-hops is-notfixed pt-6 pl-6 pr-6 pb-10' %}
+{% set classes = 'relative bg-hops-green-grit bg-top bg-center is-notfixed pt-6 pl-6 pr-6 pb-10' %}
 {% if fixed_navbar == true %}
     {% set classes = 'absolute is-fixed p-6' %}
 {% endif %}
@@ -25,7 +25,7 @@
                 <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-center flex-1 items-center font-display text-xl">
                     {% for item in navigation.items %}
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
+                        <a @click="isOpen = false" class="text-ml inline-block no-underline hover:text-black py-2 px-4 {{ 'text-black' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
                     </li>
                     {% endfor %}
                 </ul>

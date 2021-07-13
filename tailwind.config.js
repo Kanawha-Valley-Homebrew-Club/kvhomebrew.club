@@ -28,8 +28,10 @@ module.exports = {
       lime: '#92BB05',
       pine: '#284900',
       orange: '#F19702',
+      orange_hover: '#FF8000',
       white: colors.white,
       black: '#252821',
+      black_hover: '#101010',
       beige: '#F4EFE4'
     },
     fontFamily: {

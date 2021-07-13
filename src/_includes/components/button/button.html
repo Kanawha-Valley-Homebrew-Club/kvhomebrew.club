@@ -2,8 +2,8 @@
   {% case 'left-arrow' %}
     {% set classes = 'inline-block font-body font-bold' %}
   {% case 'black' %}
-    {% set classes = 'inline-block py-2 px-4 rounded-full font-display font-normal text-sm text-white bg-black' %}
+    {% set classes = 'inline-block py-2 px-4 rounded-full font-bold text-white bg-black hover:bg-black_hover' %}
   {% default %}
-    {% set classes = 'inline-block py-2 px-4 rounded-full font-display font-normal text-sm text-white bg-orange' %}
+    {% set classes = 'inline-block py-2 px-4 rounded-full font-bold text-white bg-orange hover:bg-orange_hover' %}
 {% endswitch %}
 <a href="{{ params.url }}" class="{{ classes }}">{{ params.text | safe }}</a>
