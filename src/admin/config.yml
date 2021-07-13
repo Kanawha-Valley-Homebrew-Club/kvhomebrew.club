@@ -12,7 +12,8 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Basic Page"
+  - label: "Basic Pages"
+    label_singular: "Basic Page"
     name: "page"
     folder: "src/pages"
     create: true
@@ -23,7 +24,8 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-  - label: "Event"
+  - label: "Events"
+    label_singular: "Event"
     name: "event"
     folder: "src/events"
     slug: "{{year}}/{{month}}/{{slug}}"
@@ -54,7 +56,8 @@ collections:
        fields:
          - { label: Title, name: title, widget: string }
          - { label: URL, name: url, widget: string }
-  - label: "Recipe"
+  - label: "Recipes"
+    label_singular: "Recipe"
     name: "recipe"
     folder: "src/recipes"
     create: true
@@ -75,6 +78,7 @@ collections:
           config:
             multiple: false
   - label: "Settings"
+    label_singular: "Setting"
     name: "settings"
     editor:
       preview: false
