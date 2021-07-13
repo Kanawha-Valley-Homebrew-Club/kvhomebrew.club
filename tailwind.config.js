@@ -27,8 +27,8 @@ module.exports = {
     colors: {
       lime: '#92BB05',
       pine: '#284900',
-      orange: '#F19702',
-      orange_hover: '#FF8000',
+      orange: '#FF8000',
+      orange_hover: '#FF8800',
       white: colors.white,
       black: '#252821',
       black_hover: '#101010',
