@@ -1,7 +1,7 @@
 {%- from "system/component.html" import component -%}
 <article class="mb-8">
-    {% if recipe.data.image %}
-    <div class="mb-2"><a href="{{ recipe.url | url }}" class="no-underline"><img src="{{ recipe.data.image }}?nf_resize=smartcrop&w=400&h=225" /></a></div>
+    {% if recipe.data.featured_image %}
+    <div class="mb-2"><a href="{{ recipe.url | url }}" class="no-underline"><img src="{{ recipe.data.featured_image.image }}?nf_resize=smartcrop&w=400&h=225" alt="{{ recipe.data.featured_image.alt }}" /></a></div>
     {% endif %}
     {% if recipe.data.style %}
     <div class="text-md font-bold text-lime">{{ recipe.data.style }}</div>
@@ -18,13 +18,19 @@
     <div class="flex text-sm">
         {{ component('datatag', { 
             label: 'ABV:', 
-            data: recipe.data.abv + '%',
+            data: recipe.data.specs.abv + '%',
             class: 'mr-2'
         }) }}
 
         {{ component('datatag', { 
             label: 'IBU:', 
-            data: recipe.data.ibu,
+            data: recipe.data.specs.ibu,
+            class: 'mr-2'
+        }) }}
+
+        {{ component('datatag', { 
+            label: 'OG:', 
+            data: recipe.data.specs.og,
             class: 'mr-2'
         }) }}
     </div>

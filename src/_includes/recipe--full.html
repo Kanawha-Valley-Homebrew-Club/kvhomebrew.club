@@ -1,0 +1,56 @@
+---
+layout: page
+header: false
+container: false
+---
+{%- from "system/component.html" import component -%}
+<article class="py-14">
+    <div class="container mx-auto px-4">
+    <div class="grid grid-cols-2 gap-12">
+        <div>
+            <header class="mb-12 text-center">
+                <div class="mb-4">
+                    {{ component('button', { url: '/recipes', text: '&larr; Recipes', theme: 'left-arrow' }) }}
+                </div>
+                <h1 class="text-6xl mb-4">
+                {% if title %}
+                    {{ title }}
+                {% else %}
+                    <abbr title="To Be Determined">Mystery Beer</abbr>
+                {% endif %}
+                </h1>
+                {% if subtitle %}
+                <p class="mb-4 text-xl">{{ subtitle }}</p>
+                {% endif %}
+
+                <div class="flex justify-center">
+                    {{ component('datatag', { 
+                        label: 'ABV:', 
+                        data: abv + '%',
+                        class: 'mr-2'
+                    }) }}
+            
+                    {{ component('datatag', { 
+                        label: 'IBU:', 
+                        data: ibu,
+                        class: 'mr-2'
+                    }) }}
+                </div>
+
+                <div>{{ style }}</div>
+
+                <div>{{ recipe_export }}</div>
+            </header>
+
+            <div class="text-lg">
+                {{ description | safe }}
+            </div>
+        </div>
+
+        <div class="sticky top-0">
+            <img src="{{ featured_image.image }}" alt="{{ featured_image.alt }}" class="mx-auto" />
+        </div>
+
+    </div>
+    </div>
+</article>

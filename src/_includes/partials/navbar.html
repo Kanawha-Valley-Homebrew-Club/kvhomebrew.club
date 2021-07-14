@@ -25,7 +25,7 @@
                 <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-center flex-1 items-center font-display text-xl">
                     {% for item in navigation.items %}
                     <li class="nav__item mr-3">
-                        <a @click="isOpen = false" class="text-ml inline-block no-underline hover:text-black py-2 px-4 {{ 'text-black' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
+                        <a @click="isOpen = false" class="text-ml inline-block no-underline hover:text-black py-2 px-4 {{ 'bg-black text-white' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
                     </li>
                     {% endfor %}
                 </ul>

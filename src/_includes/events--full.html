@@ -42,7 +42,7 @@ container: false
             {% set videoTitle = title %}
             {% include 'blocks/youtube.html' %}
         {% elseif image %}
-            <img src="{{ image }}nf_resize=smartcrop&w=300&h=300" />
+            <img src="{{ image }}?nf_resize=smartcrop&w=1000&h=560" />
         {% endif %}
         </div>
     </div>
