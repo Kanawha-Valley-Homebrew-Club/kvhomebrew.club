@@ -89,6 +89,19 @@ collections:
           media_folder: "src/recipes/uploads"
           config:
             multiple: false
+
+  - label: "Members"
+    label_singular: "Member"
+    name: "member"
+    folder: "src/members"
+    create: true
+    identifier_field: name
+    editor:
+      preview: false
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: 'portraits' }
+
   - label: "Settings"
     label_singular: "Setting"
     name: "settings"
