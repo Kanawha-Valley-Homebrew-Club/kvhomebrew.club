@@ -1,4 +1,4 @@
 ---
 name: Christopher Blake Brown
-portrait: portraits/chris-brown.jpg
+portrait: /static/portraits/chris-brown.jpg
 ---

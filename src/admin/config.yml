@@ -24,7 +24,7 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      
+
   - label: "Events"
     label_singular: "Event"
     name: "event"
@@ -67,14 +67,21 @@ collections:
       preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
       - label: "Featured Image"
         name: "featured_image"
         widget: "object"
         fields: 
-          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Image', name: 'image', widget: 'image', media_folder: '/static/recipes' }
           - { label: 'Alternative Text', name: 'alt', widget: 'string' }
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "member"
+        search_fields: ["name"]
+        value_field: "{{slug}}"
+        display_fields: ["name"]
       - { label: "Style", name: "style", widget: "string" }
-      - { label: "Description", name: "description", widget: "markdown" }
       - label: "Specifications"
         name: "specs"
         widget: "object"
@@ -84,11 +91,13 @@ collections:
           - { label: 'ABV', name: 'abv', widget: 'number', value_type: "float" }
           - { label: 'Original Gravity', name: 'og', widget: 'number', value_type: "float" }
           - { label: 'Final Gravity', name: 'fg', widget: 'number', value_type: "float" }
+      - { label: "Ingredients", name: "ingredients", widget: "markdown", required: false }
+      - { label: "Directions", name: "directions", widget: "markdown", required: false }
       - label: "Recipe Export"
         name: "recipe_export"
         widget: "file"
         media_library:
-          media_folder: "src/recipes/uploads"
+          media_folder: "/static/docs/recipes"
           config:
             multiple: false
 
@@ -102,7 +111,7 @@ collections:
       preview: false
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: 'portraits' }
+      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: '/static/portraits', choose_url: false }
 
   - label: "Settings"
     label_singular: "Setting"

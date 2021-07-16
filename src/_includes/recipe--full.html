@@ -4,53 +4,148 @@ header: false
 container: false
 ---
 {%- from "system/component.html" import component -%}
+{% set site_members = [] %}
+{% for member in collections.member %}
+    {% set site_members = (site_members.push({
+        name: member.data.name,
+        portrait: member.data.portrait,
+        slug: member.fileSlug
+        }), site_members) %}
+{% endfor %}
 <article class="py-14">
-    <div class="container mx-auto px-4">
-    <div class="grid grid-cols-2 gap-12">
-        <div>
-            <header class="mb-12 text-center">
-                <div class="mb-4">
-                    {{ component('button', { url: '/recipes', text: '&larr; Recipes', theme: 'left-arrow' }) }}
+    <div class="container max-w-5xl px-4">
+
+        <div class="">
+            <header class="flex items-center justify-center mb-12">
+                
+                <div class="inline-block md:pr-10 pt-8 pb-4">
+
+                    <div class="mb-4">{{
+                        component('button', {
+                            theme: 'left-arrow',
+                            text: 'Recipes',
+                            url: '/recipes'
+                        })
+                    }}</div>
+
+                    <h1 class="text-3xl md:text-5xl mb-2">
+                    {% if title %}
+                        {{ title }}
+                    {% else %}
+                        <abbr title="To Be Determined">Mystery Beer</abbr>
+                    {% endif %}
+                    </h1>
+
+                    <div class="flex">
+                        {{ component('datatag', { 
+                            label: 'ABV', 
+                            labelClasses: 'font-bold',
+                            data: specs.abv + '%',
+                            class: 'mr-4'
+                        }) }}
+
+                        {{ component('datatag', { 
+                            label: 'Style', 
+                            labelClasses: 'font-bold',
+                            data: style,
+                            class: ''
+                        }) }}
+                    </div>
                 </div>
-                <h1 class="text-6xl mb-4">
-                {% if title %}
-                    {{ title }}
-                {% else %}
-                    <abbr title="To Be Determined">Mystery Beer</abbr>
-                {% endif %}
-                </h1>
-                {% if subtitle %}
-                <p class="mb-4 text-xl">{{ subtitle }}</p>
-                {% endif %}
 
-                <div class="flex justify-center">
-                    {{ component('datatag', { 
-                        label: 'ABV:', 
-                        data: abv + '%',
-                        class: 'mr-2'
-                    }) }}
-            
-                    {{ component('datatag', { 
-                        label: 'IBU:', 
-                        data: ibu,
-                        class: 'mr-2'
-                    }) }}
+                <div class="max-w-xl">
+                    <img src="{{ featured_image.image }}" alt="{{ featured_image.alt }}" class="inline-block max-h-120 lg:max-h-70vh" />
                 </div>
 
-                <div>{{ style }}</div>
-
-                <div>{{ recipe_export }}</div>
+                {% for member in site_members %}
+                    {% if member.slug == author %}
+                        <!-- {{ component('author-microbox', {
+                            name: member.name,
+                            image: member.portrait
+                        }) }} -->
+                    {% endif %}
+                {% endfor %}
             </header>
 
-            <div class="text-lg">
-                {{ description | safe }}
+            <div class="text-2xl leading-9 mb-12">
+                <div>{{ description | safe }}</div>
             </div>
         </div>
 
-        <div class="sticky top-0">
-            <img src="{{ featured_image.image }}" alt="{{ featured_image.alt }}" class="mx-auto" />
+        <div class="grid md:grid-cols-5 gap-14 mb-6">
+            <div class="md:col-span-2">
+                <section class="mb-6 text-center md:text-left">
+                    <h2 class="text-2xl">Specifications</h2>
+        
+                    {{ component('datatag', { 
+                        label: 'Yield', 
+                        labelClasses: 'font-bold',
+                        data: specs.yield,
+                        class: 'mr-2'
+                    }) }}
+        
+                    {{ component('datatag', { 
+                        label: 'IBU',
+                        labelClasses: 'font-bold',
+                        data: specs.ibu,
+                        class: 'mr-2'
+                    }) }}
+        
+                    {{ component('datatag', { 
+                        label: 'OG', 
+                        labelClasses: 'font-bold',
+                        data: specs.og | toFixed(3),
+                        class: 'mr-2'
+                    }) }}
+        
+                    {{ component('datatag', { 
+                        label: 'FG', 
+                        labelClasses: 'font-bold',
+                        data: specs.fg | toFixed(3),
+                        class: 'mr-2'
+                    }) }}
+                </section>
+        
+                <section class="text-center md:text-left">
+                    <h2 class="text-2xl">Ingredients</h2>
+
+                    <div class="headings-font-body">
+                        {% if ingredients %}
+                        {{ ingredients | markdown | safe }}
+                        {% else %}
+                        <i>No ingredients listed.</i>
+                        {% endif %}
+                    </div>
+                </section>
+            </div>
+
+            <div class="md:col-span-3">
+                <section class="text-xl leading-8 mb-6">
+                    <h2 class="text-2xl text-center md:text-left">Directions</h2>
+        
+                    <div>
+                        {% if directions %}
+                        {{ directions | markdown | safe }}
+                        {% else %}
+                        <i>No directions listed.</i>
+                        {% endif %}
+                    </div>
+                </section>
+
+                {% if recipe_export %}
+                <section>
+                    <h2 class="text-2xl text-center md:text-left">Resources</h2>
+        
+                    {{ component('field-label', { label: 'Beer XML' })}}
+                    {{ component('button', { url: recipe_export, text: 'Download' }) }}
+                </section>
+                {% endif %}
+            </div>
         </div>
 
+        <div class="flex justify-center">
+            {% include 'blocks/sharing.html' %}
+        </div>
     </div>
-    </div>
+
 </article>

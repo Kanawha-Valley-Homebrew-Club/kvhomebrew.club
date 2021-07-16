@@ -45,6 +45,11 @@ module.exports = {
       fontSize: {
         '7xl': '5rem',
       },
+      maxHeight: {
+        '120': '30rem',
+        '50vh': '50vh',
+        '70vh': '70vh',
+      },
       padding: {
         '10vh': '10vh',
         '20vw': '20vw',

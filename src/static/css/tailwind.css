@@ -10,10 +10,23 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   @apply font-display;
+  margin-bottom: 1rem;
+}
+
+.headings-font-body h2,
+.headings-font-body h3,
+.headings-font-body h4 {
+  @apply font-body;
+  @apply font-bold;
+  margin-bottom: 0;
 }
 
 a {
   @apply underline;
+}
+
+p {
+  margin-bottom: 1em;
 }
 
 lite-youtube {

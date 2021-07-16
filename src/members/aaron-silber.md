@@ -1,4 +1,4 @@
 ---
 name: Aaron Silber
-portrait: portraits/silber-portrait.jpg
+portrait: /static/portraits/silber-portrait.jpg
 ---

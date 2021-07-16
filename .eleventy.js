@@ -11,6 +11,10 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
+  eleventyConfig.addFilter('toFixed', (num, digits) => {
+    return parseFloat(num).toFixed(digits);
+  });
+
   // Render markdown to html
   eleventyConfig.addFilter("markdown", (content) => {
     return markdownIt({ html: true }).render(content);
@@ -82,8 +86,13 @@ module.exports = function (eleventyConfig) {
       "./static/css/prism-tomorrow.css",
   });
 
-  // Copy Image Folder to /_site
+  // Copy Image Folders to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
+  eleventyConfig.addPassthroughCopy("./src/static/portraits");
+  eleventyConfig.addPassthroughCopy("./src/static/recipes");
+
+  // Copy Docs to /_site
+  eleventyConfig.addPassthroughCopy("./src/static/docs");
 
   // Copy Theme Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/theme");
