@@ -1,5 +1,5 @@
 {
-    "layout": "page",
+    "layout": "basic-page",
     "permalink": "/{{ page.fileSlug }}/",
     "tags": [
         "page"
