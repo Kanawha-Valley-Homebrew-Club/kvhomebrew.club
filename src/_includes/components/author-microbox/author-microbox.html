@@ -1,4 +1,16 @@
-<div>
-    <div>{{ params.name }}</div>
-    <img src="{{ params.image }}" width="100" class="block" />
+{% switch params.theme %}
+    {% case 'dark' %}
+    {% set imageClasses = 'bg-white' %}
+    {% set memberFlagClasses = 'bg-lime text-black' %}
+    {% default %}
+    {% set imageClasses = 'bg-black' %}
+    {% set memberFlagClasses = 'bg-black text-white' %}
+{% endswitch %}
+<div class="relative {{ params.wrapperClasses }}" style="max-width: 10rem;">
+    <div class="p-1 rounded {{ imageClasses }}"><img src="{{ params.image }}" class="block" /></div>
+    <div class="p-2 font-display text-center {{ nameClasses }}">{{ params.name }}</div>
+    <div class="absolute top-4 -right-4 p-2 text-center leading-4 {{ memberFlagClasses }}">
+        <div class="text-xs font-bold">Member</div>
+        <div class="font-display">{{ params.membership_year }}</div>
+    </div>
 </div>

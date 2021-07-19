@@ -96,6 +96,7 @@ collections:
       - label: "Recipe Export"
         name: "recipe_export"
         widget: "file"
+        required: false
         media_library:
           media_folder: "/static/docs/recipes"
           config:
@@ -111,7 +112,9 @@ collections:
       preview: false
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Membership Year', name: 'membership_year', widget: 'number' }
       - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: '/static/portraits', choose_url: false }
+      - { label: 'Bio', name: 'bio', widget: 'markdown', required: false }
 
   - label: "Settings"
     label_singular: "Setting"

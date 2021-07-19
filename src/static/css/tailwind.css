@@ -25,6 +25,14 @@ a {
   @apply underline;
 }
 
+.bg-download {
+  background-image: 
+    url('/static/theme/chevron-down.svg'), 
+    linear-gradient(to left, hsl(30.1, 97%, 46%) 2rem, hsl(32, 100%, 50%) 2rem);
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center, center center;
+}
+
 p {
   margin-bottom: 1em;
 }

@@ -10,10 +10,20 @@ container: true
 <div class="container px-4 py-14">
 {% endif %}
     {% if header %}
+    <div class="max-w-3xl mx-auto">
     {{ component('titlebar', { title: title, subtitle: subtitle }) }}
+    </div>
     {% endif %}
 
-    {{ content | safe }}
+    {% if image %}
+    <div class="mb-12 max-w-5xl mx-auto">
+        <img src="{{ image }}" alt="">
+    </div>
+    {% endif %}
+
+    <div class="max-w-3xl mx-auto text-xl leading-8">
+        {{ content | safe }}
+    </div>
 {% if container %}
 </div>
 {% endif %}

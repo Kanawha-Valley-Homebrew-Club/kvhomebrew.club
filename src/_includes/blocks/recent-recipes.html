@@ -1,0 +1,17 @@
+<aside class="py-14">
+    <div class="container px-4">
+        {{ component('titlebar', {
+            title: 'Recent Recipes',
+            textSize: '4xl',
+            subtitle: 'More recipes from our KVHC members.'
+        }) }}
+
+        <div class="block md:grid md:grid-cols-3 gap-6">
+            {% for recipe in collections.recipe %}
+            <div>
+                {% include 'recipe--teaser.html' %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</aside>

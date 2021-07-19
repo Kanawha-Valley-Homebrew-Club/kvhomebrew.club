@@ -17,19 +17,22 @@
     </h1>
     <div class="flex text-sm">
         {{ component('datatag', { 
-            label: 'ABV:', 
+            label: 'ABV', 
+            labelClasses: 'font-bold',
             data: recipe.data.specs.abv + '%',
             class: 'mr-2'
         }) }}
 
         {{ component('datatag', { 
-            label: 'IBU:', 
+            label: 'IBU', 
+            labelClasses: 'font-bold',
             data: recipe.data.specs.ibu,
             class: 'mr-2'
         }) }}
 
         {{ component('datatag', { 
-            label: 'OG:', 
+            label: 'OG', 
+            labelClasses: 'font-bold',
             data: recipe.data.specs.og,
             class: 'mr-2'
         }) }}

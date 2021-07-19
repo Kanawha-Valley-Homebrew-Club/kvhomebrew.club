@@ -3,6 +3,7 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
+const util = require('util');
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -102,6 +103,12 @@ module.exports = function (eleventyConfig) {
 
   // Get the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // Console log variables
+  eleventyConfig.addFilter('console', function(value) {
+    const str = util.inspect(value);
+    return `<pre class="block" style="max-height: 500px; overflow-y: scroll;">${unescape(str)}</pre>;`
+  });
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
