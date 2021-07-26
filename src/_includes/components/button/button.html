@@ -4,10 +4,10 @@
     {% set classes = 'inline-block py-2 px-4 bg-white border-black border-thin border-opacity-25 rounded-full font-body font-bold hover:bg-black hover:text-white' %}
     {% set buttonText = '&larr; ' + buttonText %}
   {% case 'black' %}
-    {% set classes = 'inline-block py-2 px-4 rounded-full font-bold text-white bg-black hover:bg-black_hover' %}
+    {% set classes = 'inline-block py-2 px-4 rounded-2xl font-bold text-white bg-black hover:bg-black_hover' %}
   {% case 'download' %}
-    {% set classes = 'inline-block py-2 pl-4 pr-10 rounded-full font-bold text-white bg-download bg-repeat-download' %}
+    {% set classes = 'inline-block py-2 pl-4 pr-10 rounded-2xl font-bold text-white bg-download bg-repeat-download' %}
   {% default %}
-    {% set classes = 'inline-block py-2 px-4 rounded-full font-bold text-white bg-orange hover:bg-orange_hover' %}
+    {% set classes = 'inline-block py-2 px-4 rounded-2xl font-bold text-white bg-orange hover:bg-orange_hover' %}
 {% endswitch %}
 <a href="{{ params.url }}" class="{{ classes }} no-underline">{{ buttonText | safe }}</a>

@@ -53,6 +53,9 @@ module.exports = {
       padding: {
         '10vh': '10vh',
         '20vw': '20vw',
+      },
+      screens: {
+        'smMax': {'max': '639px'},
       }
     }
   },

@@ -16,13 +16,9 @@ container: false
 <article class="pt-14">
     <div class="container px-4">
         
-        <header class="grid md:grid-cols-12 gap-6 md:gap-14 mb-14 mx-auto">
-            <div class="md:col-span-3">
-                <img src="{{ featured_image.image }}" alt="{{ featured_image.alt }}" class="block rounded" />
-            </div>
-            
-            <div class="md:col-span-9">
-                <div class="py-6 pr-6 text-center md:text-left">
+        <header class="overflow-hidden mx-auto text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="py-6 pr-6 text-center">
                     <div class="mb-4">{{
                         component('button', {
                             theme: 'left-arrow',
@@ -39,7 +35,7 @@ container: false
                     {% endif %}
                     </h1>
 
-                    <div class="flex justify-center md:justify-start">
+                    <div class="flex justify-center">
                         {{ component('datatag', { 
                             label: 'ABV', 
                             labelClasses: 'font-bold',
@@ -58,18 +54,22 @@ container: false
 
                 <div class="text-2xl leading-9 mb-4 md:mb-12">
                     <div class="mb-6">{{ description | safe }}</div>
-                    <div class="flex justify-center md:justify-start">
+                    <div class="flex justify-center">
                         {% include 'blocks/sharing.html' %}
                     </div>
                 </div>
+            </div>
+
+            <div class="-mb-6 text-center h-96">
+                <img src="{{ featured_image.image }}" alt="{{ featured_image.alt }}" class="max-h-100 inline-block rounded-xl" />
             </div>
         </header>
     </div>
 
     <div class="bg-black text-white py-10">
-        <div class="container px-4">
+        <div class="container max-w-5xl px-4 mx-auto">
             <div class="grid md:grid-cols-8 lg:grid-cols-12 gap-14 mb-6">
-                <div class="md:col-span-2 lg:col-span-3">
+                <div class="md:col-span-2 lg:col-span-4 text-sm">
                     <section class="mb-6 text-center md:text-left">
                         <h2 class="text-xl">Specifications</h2>
             
@@ -115,31 +115,33 @@ container: false
                     </section>
                 </div>
     
-                <div class="md:col-span-4 lg:col-span-6">
-                    <section class="text-xl leading-8 mb-6">
+                <div class="md:col-span-6 lg:col-span-8">
+                    <section class="text-xl leading-8 mb-4">
                         <h2 class="text-2xl text-center md:text-left">Directions</h2>
             
                         <div>
                             {% if directions %}
                             {{ directions | markdown | safe }}
                             {% else %}
-                            <i>No directions listed.</i>
+                            <div class="text-center">
+                                <i>No directions listed.</i>
+                            </div>
                             {% endif %}
                         </div>
                     </section>
     
                     {% if recipe_export %}
-                    <section class="text-center md:text-left">
-                        <h2 class="text-2xl text-center md:text-left">Resources</h2>        
+                    <section class="text-center md:text-left mb-12">
+                        <h2 class="font-body font-bold text-xl text-center md:text-left">Resources</h2>        
                         {{ component('button', { url: recipe_export, text: 'Beer XML', theme: 'download' }) }}
                     </section>
                     {% endif %}
-                </div>
-    
-                <div class="md:col-span-2 lg:col-span-3">
-                    <h2 class="text-xl text-center md:text-left">Brewer</h2>
-                    {% for member in site_members %}
-                    {% if member.slug == author %}
+
+                    {% if author %}
+                    <section>
+                        <h2 class="text-2xl text-center md:text-left">Brewed By</h2>     
+                        {% for member in site_members %}
+                        {% if member.slug == author %}
                         {{ component('author-microbox', {
                             name: member.name,
                             image: member.portrait,
@@ -147,8 +149,10 @@ container: false
                             wrapperClasses: 'mx-auto md:mx-0',
                             theme: 'dark'
                         }) }}
-                    {% endif %}
-                    {% endfor %}
+                        {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                    </section>
                 </div>
             </div>
         </div>
