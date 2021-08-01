@@ -30,7 +30,7 @@
                     <ul class="pt-2 md:pt-0 lg:pt-0 list-reset md:flex justify-center md:justify-start lg:justify-center flex-1 items-center font-display text-lg lg:text-lg">
                         {% for item in navigation.items %}
                         <li class="nav__item md:mr-3">
-                            <a @click="isOpen = false" class="inline-block no-underline hover:text-black py-2 px-2 md:px-4 smMax:text-2xl {{ 'bg-black text-white' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
+                            <a @click="isOpen = false" class="inline-block no-underline hover:bg-black hover:text-white py-2 px-2 md:px-4 smMax:text-2xl {{ 'bg-black text-white' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
                         </li>
                         {% endfor %}
                     </ul>
