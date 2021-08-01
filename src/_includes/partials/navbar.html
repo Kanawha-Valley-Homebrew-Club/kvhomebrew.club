@@ -6,16 +6,16 @@
 {% endif %}
 <div id="navbar" class="w-full md:text-white {{ classes }}">
     <div class="max-w-7xl mx-auto">
-    <nav class="grid grid-cols-7 lg:grid-cols-12 lg:gap-14" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+    <nav class="grid grid-cols-7 md:grid-cols-12 md:gap-6 lg:grid-cols-12 lg:gap-14" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
         <!--Logo etc-->
-        <div class="col-start-1 col-span-4 lg:col-span-3 flex items-center">
+        <div class="col-start-1 col-span-4 md:col-start-5 md:col-span-4 lg:col-span-3 flex items-center">
             {% include 'blocks/logo.html' %}
         </div>
 
         <!--Toggle button (hidden on large screens)-->
-        <div class="col-start-7 block lg:hidden">
-            <button @click="isOpen = !isOpen" type="button" class="ml-auto px-2" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-                <svg class="h-14 w-14 fill-black" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+        <div class="col-start-7 block md:hidden">
+            <button @click="isOpen = !isOpen" type="button" class="ml-auto" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
+                <svg class="h-14 w-14 max-w-full fill-black" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
                     <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
                     <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
                 </svg>
@@ -23,14 +23,14 @@
         </div>
 
         <!--Menu-->
-        <div class="row-start-2 lg:row-auto col-span-full lg:col-span-9 grid lg:grid-cols-9 gap-14 smMax:gap-y-4">
+        <div class="row-start-2 md:row-auto col-span-full md:col-span-full lg:col-span-9 grid md:grid-cols-4 lg:grid-cols-9 lg:gap-14 smMax:gap-y-4">
 
-            <div class="lg:col-span-6 lg:flex lg:items-center lg:w-auto md:text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
+            <div class="md:col-span-3 lg:col-span-6 md:flex md:items-center md:w-auto md:text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
                 {% if navigation.items %}
-                    <ul class="pt-2 lg:pt-0 list-reset lg:flex justify-center flex-1 items-center font-display text-lg">
+                    <ul class="pt-2 md:pt-0 lg:pt-0 list-reset md:flex justify-center md:justify-start lg:justify-center flex-1 items-center font-display text-lg lg:text-lg">
                         {% for item in navigation.items %}
                         <li class="nav__item md:mr-3">
-                            <a @click="isOpen = false" class="inline-block no-underline hover:text-black py-2 md:px-4 smMax:text-2xl {{ 'bg-black text-white' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
+                            <a @click="isOpen = false" class="inline-block no-underline hover:text-black py-2 px-2 md:px-4 smMax:text-2xl {{ 'bg-black text-white' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -38,13 +38,12 @@
             </div>
 
             <!-- Call to Action -->
-            <div class="lg:col-span-3 lg:flex justify-end" :class="{ 'block': isOpen, 'hidden': !isOpen }">
+            <div class="md:col-span-1 lg:col-span-3 md:flex justify-end text-center text-sm" :class="{ 'block': isOpen, 'hidden': !isOpen }">
                 {% if cta_link.cta_url %}
                 <div>{{ component('button', { url: cta_link.cta_url, text: cta_link.cta_text }) }}</div>
                 {% endif %}
             </div>
         </div>
-
     </nav>
     </div>
 </div>
