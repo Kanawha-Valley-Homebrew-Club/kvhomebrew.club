@@ -181,3 +181,22 @@ body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   /* @apply bg-gray-800; */
 }
+
+
+/*
+ * Forms
+ */
+
+form {
+  @apply p-6 border-solid border-black border-thin border-opacity-20 bg-white rounded-xl;
+}
+
+input[type=text],
+input[type=email],
+input[type=textarea] {
+  @apply border-black border-opacity-20 border-thin;
+}
+
+button {
+  @apply bg-orange px-6 py-2 rounded-full text-white font-bold;
+}
