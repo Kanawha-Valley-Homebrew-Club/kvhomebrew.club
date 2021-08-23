@@ -6,15 +6,15 @@
     {% set imageClasses = 'bg-black' %}
     {% set memberFlagClasses = 'bg-black text-white' %}
 {% endswitch %}
-<div class="relative flex border-opacity-25 border-white border-solid border-thin {{ params.wrapperClasses }} max-w-sm">
-    <div class="col-span-1">
+<div class="relative inline-flex justify-center text-left border-opacity-25 {{ params.wrapperClasses }} max-w-sm">
+    <div class="">
         <div class="p-1 {{ imageClasses }}"><img src="{{ params.image }}" class="block" width="80" /></div>
     </div>
-    <div class="block md:flex flex-col flex-grow px-4 py-2 md:p-4 col-span-2 align-center justify-center">
+    <div class="flex flex-col flex-grow px-4 justify-center">
         <div class="font-bold text-lg {{ nameClasses }}">{{ params.name }}</div>
-        <div class="relative md:absolute inline-block md:block overflow-hidden flex-shrink md:top-4 md:-right-4 p-1 md:p-2 text-center leading-4 rounded-none {{ memberFlagClasses }}">
-            <span class="inline md:block text-xs font-bold">Member</span>
-            <span class="inline md:block text-xs md:text-md font-bold font-body md:font-display">{{ params.membership_year }}</span>
+        <div class="relative inline-block mr-auto overflow-hidden flex-shrink px-2 py-1 leading-4 rounded-full {{ memberFlagClasses }}">
+            <span class="inline text-xs font-bold">Member Since</span>
+            <span class="inline text-xs md:text-md font-bold font-display">{{ params.membership_year }}</span>
         </div>
     </div>
 </div>

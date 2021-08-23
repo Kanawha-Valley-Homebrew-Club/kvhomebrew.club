@@ -1,11 +1,97 @@
-<form name="visitation" method="POST" data-netlify="true">
+<form name="visitation" method="POST" data-netlify="true" netlify-honeypot="robo-field">
+    <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="robo-field" /></label>
+    </p>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <div class="form-field">
+            <label class="relative">
+                <div class="label__text">Name </div>
+                <input type="text" name="name" />
+            </label>
+        </div>
+        <div class="form-field">
+            <label>
+                <div class="label__text">Email </div>
+                <input type="email" name="email" />
+            </label>
+        </div>
+        <div class="form-field">
+            <label>
+                <div class="label__text">Phone </div>
+                <input type="tel" name="phone" />
+            </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Brewing History</legend>
+        <div class="form-field">
+            <label>
+                <div class="label__text">Favorite Beer </div>
+                <input type="text" name="favorite-beer" />
+            </label>
+        </div>
+        <div class="form-field">
+            <label>
+                <div class="label__text">How would you best describe your experience level in brewing? </div>
+                <select name="experience_level">
+                    <option value="0">I've never brewed beer before.</option>
+                    <option value="1">I've used a kit to brew beer once or twice.</option>
+                    <option value="2">I've brewed a few extract kits in my kitchen.</option>
+                    <option value="3">I brew all-grain recipe kits that I purchase online.</option>
+                    <option value="4">I brew and create my own all-grain recipes.</option>
+                    <option value="5">I try to control every variable involved in brewing beer.</option>
+                    <option value="6">I run a professional brewing operation.</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-field">
+            <label>
+                <div class="label__text">Which benefits of club membership most interest you? (choose three)</div>
+                <div class="block md:grid grid-cols-2 gap-x-4">
+                    <label class="flex flex-row pb-2" for="benefits.discounts">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.discounts" id="benefits.discounts">
+                        <span>Discounts</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.meetings-feedback">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.meetings-feedback" id="benefits.meetings-feedback">
+                        <span>Club meetings & feedback</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.merch">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.merch" id="benefits.merch">
+                        <span>Club merchandise</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.groupbuys">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.groupbuys" id="benefits.groupbuys">
+                        <span>Discounted group purchases (Grain, hops, adjuncts, etc)</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.usedsales">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.usedsales" id="benefits.usedsales">
+                        <span>Used equipment sales</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.competitions">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.competitions" id="benefits.competitions">
+                        <span>Homebrew Competitions</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.knowledge">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.knowledge" id="benefits.knowledge">
+                        <span>Knowledge sharing</span>
+                    </label>
+                    <label class="flex flex-row pb-2" for="benefits.localingredients">
+                        <input type="checkbox" class="mt-1 mr-2" name="benefits.localingredients" id="benefits.localingredients">
+                        <span>Access to local ingredients</span>
+                    </label>
+                </div>
+            </label>
+        </div>
+        <div class="form-field">
+            <label>
+                <div class="label__text">What brings you to our club?</div>
+                <textarea name="intention" rows="4"></textarea>
+            </label>
+        </div>
+    </fieldset>
     <div>
-        <label>Your Name: <input type="text" name="name" /></label>
-    </div>
-    <div>
-        <label>Your Email: <input type="email" name="email" /></label>
-    </div>
-    <div>
-        <button type="submit">Send</button>
+        <button type="submit" class="w-full">Send</button>
     </div>
 </form>

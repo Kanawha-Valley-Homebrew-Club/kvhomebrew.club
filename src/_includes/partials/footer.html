@@ -1,16 +1,18 @@
 <footer class="text-center bg-hops-gradient bg-cover text-white w-full py-8">
+    <div class="max-w-7xl mx-auto px-4">
 
-    {% if navigation.items %}
-    <nav class="mb-4">
-        <ul class="font-display font-normal text-lg lg:pt-0 list-reset lg:flex justify-center flex-1 items-center">
-            {% for item in navigation.items %}
-                <li class="mx-4 inline-block">
-                    <a class="inline-block no-underline {{ 'text-black' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
-    {% endif %}
+        {% if navigation.items %}
+        <nav class="mb-4">
+            <ul class="font-display font-normal text-lg lg:pt-0 list-reset lg:flex justify-center flex-1 items-center">
+                {% for item in navigation.items %}
+                    <li class="mx-4 inline-block">
+                        <a class="inline-block no-underline {{ 'text-black' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        {% endif %}
 
-    <small class="text-lg opacity-75 text-beige">Copyright © {% year %} {{settings.site_name}} | <a href="/admin">Login</a></small>
+        <small class="text-lg opacity-75 text-beige">Copyright © {% year %} {{settings.site_name}} | <a href="/admin">Login</a></small>
+    </div>
 </footer>

@@ -63,7 +63,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("event_time", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "est" }).toFormat(
+    return DateTime.fromJSDate(dateObj).toFormat(
       "t"
     ).toLowerCase().replace(/\s/g, "");
   });

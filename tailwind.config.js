@@ -19,6 +19,7 @@ module.exports = {
     },
     borderWidth: {
       'thin': '1px',
+      '2': '2px',
       '4': '4px',
     },
     container: {
@@ -32,7 +33,8 @@ module.exports = {
       white: colors.white,
       black: '#252821',
       black_hover: '#101010',
-      beige: '#F4EFE4'
+      beige: '#F4EFE4',
+      formfields: '#f3f1ed'
     },
     fontFamily: {
       'display': ['Alfa Slab One'],
