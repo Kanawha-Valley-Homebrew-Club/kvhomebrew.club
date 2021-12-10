@@ -72,8 +72,8 @@ collections:
         name: "featured_image"
         widget: "object"
         fields: 
-          - { label: 'Image', name: 'image', widget: 'image', media_folder: '/static/recipes' }
-          - { label: 'Alternative Text', name: 'alt', widget: 'string' }
+          - { label: 'Image', name: 'image', widget: 'image', media_folder: '/static/recipes', required: false }
+          - { label: 'Alternative Text', name: 'alt', widget: 'string', required: false }
       - label: "Author"
         name: "author"
         widget: "relation"
@@ -113,7 +113,7 @@ collections:
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Membership Year', name: 'membership_year', widget: 'number' }
-      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: '/static/portraits', choose_url: false }
+      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: '/static/portraits', choose_url: false, required: false }
       - { label: 'Bio', name: 'bio', widget: 'markdown', required: false }
 
   - label: "Settings"
