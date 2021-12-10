@@ -7,10 +7,12 @@
     {% set memberFlagClasses = 'bg-black text-white' %}
 {% endswitch %}
 <div class="relative inline-flex justify-center text-left border-opacity-25 {{ params.wrapperClasses }} max-w-sm">
-    <div class="">
+    {% if params.image %}
+    <div class="mr-4">
         <div class="p-1 {{ imageClasses }}"><img src="{{ params.image }}" class="block" width="80" /></div>
     </div>
-    <div class="flex flex-col flex-grow px-4 justify-center">
+    {% endif %}
+    <div class="flex flex-col flex-grow justify-center">
         <div class="font-bold text-lg {{ nameClasses }}">{{ params.name }}</div>
         <div class="relative inline-block mr-auto overflow-hidden flex-shrink px-2 py-1 leading-4 rounded-full {{ memberFlagClasses }}">
             <span class="inline text-xs font-bold">Member Since</span>
