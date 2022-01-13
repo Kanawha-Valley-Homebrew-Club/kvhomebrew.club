@@ -1,7 +1,5 @@
 items:
-  - text: Meetings & Events
+  - text: Events
     url: /events
-  - text: Recipes
-    url: /recipes
   - text: Contact
     url: /contact-us
