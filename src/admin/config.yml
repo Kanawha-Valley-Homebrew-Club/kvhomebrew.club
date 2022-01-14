@@ -30,7 +30,8 @@ collections:
     name: "event"
     summary: "{{title}} — {{date | date('MMM DD, YYYY')}}"
     folder: "src/events"
-    slug: "{{year}}/{{month}}/{{slug}}"
+    slug: "{{slug}}"
+    path: "{{year}}/{{month}}/{{slug}}"
     create: true
     editor:
       preview: true
