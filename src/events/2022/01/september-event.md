@@ -1,7 +1,7 @@
 ---
 title: September Event
 subtitle: Pizza beers, hard seltzers and a game of "Is this infected?"
-date: 2021-09-17T21:00:00.000Z
+date: 09-17-2021 18:00 -0400
 location: Bridge Valley
 image: /static/img/homebrew-club-meeting.jpeg
 ---

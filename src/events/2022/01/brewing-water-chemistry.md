@@ -1,7 +1,7 @@
 ---
 title: Brewing Water Chemistry
 subtitle: May Monthly Club Meeting
-date: 2021-08-17T00:00:00.000Z
+date: 08-16-2021 14:00 -0400
 location: <https://meetings.zoom.com/e/15698433262498>
 image: https://cdn.stamped.io/tr:h-800,/uploads/photos/103641_11429894862_1f71e89a_d1f4_40b3_b7e1_2b9dad914957.jpg?
 stream: ""
