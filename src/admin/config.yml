@@ -28,6 +28,7 @@ collections:
   - label: "Events"
     label_singular: "Event"
     name: "event"
+    summary: "{{title}} — {{date | date('MMM DD, YYYY')}}"
     folder: "src/events"
     slug: "{{year}}/{{month}}/{{slug}}"
     create: true
