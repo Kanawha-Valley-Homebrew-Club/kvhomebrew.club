@@ -49,25 +49,29 @@ module.exports = function (eleventyConfig) {
   // human readable date
   eleventyConfig.addFilter("event_day", (dateObj) => {
     return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
-      "d"
+      "d",
+      { zone: 'America/New_York' }
     );
   });
 
   eleventyConfig.addFilter("event_month", (dateObj) => {
     return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
-      "LLLL"
+      "LLLL",
+      { zone: 'America/New_York' }
     );
   });
 
   eleventyConfig.addFilter("event_year", (dateObj) => {
     return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
-      "yyyy"
+      "yyyy",
+      { zone: 'America/New_York' }
     );
   });
 
   eleventyConfig.addFilter("event_time", (dateObj) => {
     return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
-      "t"
+      "t",
+      { zone: 'America/New_York' }
     ).toLowerCase().replace(/\s/g, "");
   });
 
