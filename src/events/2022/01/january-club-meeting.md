@@ -6,6 +6,7 @@ location: |-
   BridgeValley Advanced Technology Center\
   1201 Science Park Dr, Room 134\
   South Charleston, WV
+image: aaron-doucett-fjbjbetdogk-unsplash.jpg
 ---
 Our first meeting of the 2022 year will include hearing some vision from club officers for the year, upcoming events and our beer share/feedback time.
 
