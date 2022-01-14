@@ -28,7 +28,7 @@ collections:
   - label: "Events"
     label_singular: "Event"
     name: "event"
-    summary: "{{title}} — {{date | date('MMM DD, YYYY')}}"
+    summary: "{{title}}"
     folder: "src/events"
     slug: "{{slug}}"
     path: "{{year}}/{{month}}/{{slug}}"
@@ -38,7 +38,7 @@ collections:
     fields:
      - { label: "Title", name: "title", widget: "string" }
      - { label: "Subtitle", name: "subtitle", widget: "string" }
-     - { label: "Date", name: "date", widget: "datetime", default: "", format: 'MM-DD-YYYY HH:mm ZZ', date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
+     - { label: "Date", name: "event_date", widget: "datetime", default: "", format: 'MM-DD-YYYY HH:mm ZZ', date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
      - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
      - { label: "Featured Image", name: "image", widget: "image", required: false }
      - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }

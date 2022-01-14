@@ -4,6 +4,9 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
 const util = require('util');
+const { exit } = require("process");
+
+const eventdateFormat = 'MM-dd-yyyy hh:mm ZZZ';
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -24,7 +27,7 @@ module.exports = function (eleventyConfig) {
   // Filters for future dates in Events.
   eleventyConfig.addFilter("futureDates", (events) => {
     return events.filter((event) => {
-      const eventDate = new Date(event.data.date);
+      const eventDate = new Date(event.data.event_date);
 
       if (eventDate.getTime() >= Date.now()) {
         return event;
@@ -35,7 +38,7 @@ module.exports = function (eleventyConfig) {
   // Filters for past dates in Events.
   eleventyConfig.addFilter("pastDates", (events) => {
     return events.filter((event) => {
-      const eventDate = new Date(event.data.date);
+      const eventDate = new Date(event.data.event_date);
 
       if (eventDate.getTime() < Date.now()) {
         return event;
@@ -45,25 +48,25 @@ module.exports = function (eleventyConfig) {
 
   // human readable date
   eleventyConfig.addFilter("event_day", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "America/New_York" }).toFormat(
+    return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
       "d"
     );
   });
 
   eleventyConfig.addFilter("event_month", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "est" }).toFormat(
+    return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
       "LLLL"
     );
   });
 
   eleventyConfig.addFilter("event_year", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "est" }).toFormat(
+    return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
       "yyyy"
     );
   });
 
   eleventyConfig.addFilter("event_time", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat(
+    return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
       "t"
     ).toLowerCase().replace(/\s/g, "");
   });
