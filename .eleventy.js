@@ -98,6 +98,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/img");
   eleventyConfig.addPassthroughCopy("./src/static/portraits");
   eleventyConfig.addPassthroughCopy("./src/static/recipes");
+  eleventyConfig.addPassthroughCopy("./src/static/events");
 
   // Copy Docs to /_site
   eleventyConfig.addPassthroughCopy("./src/static/docs");
