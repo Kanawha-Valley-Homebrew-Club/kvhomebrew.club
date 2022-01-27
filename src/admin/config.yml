@@ -40,7 +40,7 @@ collections:
      - { label: "Subtitle", name: "subtitle", widget: "string" }
      - { label: "Date", name: "event_date", widget: "datetime", default: "", format: 'MM-DD-YYYY HH:mm ZZ', date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
      - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
-     - { label: "Featured Image", name: "image", widget: "image", required: false }
+     - { label: "Featured Image", name: "image", widget: "image", media_folder: '/static/events', required: false }
      - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }
      - { label: "Body", name: "body", widget: "markdown" }
      - label: Guests
@@ -74,7 +74,7 @@ collections:
         name: "featured_image"
         widget: "object"
         fields: 
-          - { label: 'Image', name: 'image', widget: 'image', media_folder: '/static/recipes', required: false }
+          - { label: 'Image', name: 'image', widget: 'image', media_folder: 'static/recipes', required: false }
           - { label: 'Alternative Text', name: 'alt', widget: 'string', required: false }
       - label: "Author"
         name: "author"
@@ -115,7 +115,7 @@ collections:
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Membership Year', name: 'membership_year', widget: 'number' }
-      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: '/static/portraits', choose_url: false, required: false }
+      - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: 'static/portraits', choose_url: false, required: false }
       - { label: 'Bio', name: 'bio', widget: 'markdown', required: false }
 
   - label: "Settings"
