@@ -28,7 +28,7 @@ collections:
   - label: "Events"
     label_singular: "Event"
     name: "event"
-    summary: "{{title}}"
+    summary: "{{title}}: {{subtitle}}"
     folder: "src/events"
     slug: "{{slug}}"
     path: "{{year}}/{{month}}/{{slug}}"
