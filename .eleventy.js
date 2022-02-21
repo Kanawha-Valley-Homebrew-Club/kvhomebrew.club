@@ -107,7 +107,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/theme");
 
   // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/static/favicon");
 
   // Get the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
