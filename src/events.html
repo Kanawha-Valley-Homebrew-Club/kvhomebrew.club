@@ -12,7 +12,7 @@ layout: page
         {{ component('titlebar', { title: title, subtitle: subtitle }) }}
 
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-10 mb-10">
-            {% set futureEvents = collections.event | futureDates %}
+            {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
             {% for event in futureEvents %}
                 {% include 'events--teaser.html' %}
             {% endfor %}
@@ -26,7 +26,7 @@ layout: page
         {{ component('titlebar', { title: 'Past Events', subtitle: 'Explore notes and videos from past events.', textSize: '5xl' }) }} 
 
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-10 mb-10">
-            {% set pastEvents = collections.event | pastDates %}
+            {% set pastEvents = collections.event | pastDates | sort(false, false, 'data.event_date') | reverse %}
             {% for event in pastEvents %}
                 {% include 'events--teaser.html' %}
             {% endfor %}

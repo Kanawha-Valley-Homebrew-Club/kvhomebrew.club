@@ -7,7 +7,7 @@
     </header>
     <div class="container px-4">
         <div class="grid grid-cols-3 gap-x-8">
-        {% set futureEvents = collections.event | futureDates %}
+        {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
         {% for event in futureEvents %}
             {% if loop.index0 < 3 %}
                 {% include 'events--teaser.html' %}
