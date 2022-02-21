@@ -2,29 +2,22 @@
 <section class="pt-20 pb-20">
   <div class="container px-4">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div class="md:col-span-full lg:col-span-2 bg-lime text-white rounded-xl overflow-hidden">
+      <div class="md:col-span-full lg:col-span-3 bg-lime text-white rounded-xl overflow-hidden">
         <div class="h-full grid md:grid-cols-2 lg:grid-cols-2">
           <div class="p-10 flex flex-col justify-center text-center">
-            <h2 class="mb-4 text-3xl">Try before you buy</h2>
-            <p class="mb-4">We invite you to attend a meeting before joining the KVHC. Say Hello if you plan on attending so our welcoming team can ensure you get the most out of your visit.</p>
+            <h2 class="mb-4 text-3xl">Attend a Meeting for free!</h2>
+            <p class="mb-4 text-lg">We invite you to attend a meeting before joining the club. Say Hello if you plan on attending so our welcoming team can ensure you get the most out of your visit.</p>
             <div>{{ component('button', { url: '/welcome-visitors', text: 'Say Hello' }) }}</div>
           </div>
 
           <div class="p-10 flex flex-col justify-center h-full bg-hops-green-muted bg-cover text-center">
-            <div class="mb-2 font-display text-2xl">only</div>
+            <div class="mb-2 font-display text-2xl">Membership only</div>
             <div class="mb-2 font-display text-7xl">$20<span class="text-4xl">/yr</span></div>
             <div>{{ component('button', { url: '/membership', text: 'Join Today', theme: 'black' }) }}</div>
           </div>
         </div>
       </div>
-
-      <div class="md:col-span-full lg:col-span-1">
-        <aside class="p-10 flex flex-col text-center justify-center border-solid border-black border-thin border-opacity-25 rounded-xl">
-          <h1 class="mb-4 text-3xl">Big Brew<br/>Little Brew</h1>
-          <p class="mb-4">Looking for a structured way to get into the art of brewing? Brand spankin’ new for 2021, “Big Brew Little Brew” is our brewer mentorship program.</p>
-          <div>{{ component('button', { url: '/big-brew-little-brew', text: 'Learn More &amp; Apply' }) }}</div>
-        </aside>
-      </div>
+      
     </div>
   </div>
 </section>

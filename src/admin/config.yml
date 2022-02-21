@@ -28,21 +28,26 @@ collections:
   - label: "Events"
     label_singular: "Event"
     name: "event"
-    summary: "{{title}}: {{subtitle}}"
+    summary: "{{fields.event_date | date('MMM DD, YYYY')}} | {{title}}: {{subtitle}}"
     folder: "src/events"
     slug: "{{slug}}"
     path: "{{year}}/{{month}}/{{slug}}"
     create: true
     editor:
       preview: true
+    view_groups:
+      - label: Year
+        field: event_date
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
     fields:
      - { label: "Title", name: "title", widget: "string" }
-     - { label: "Subtitle", name: "subtitle", widget: "string" }
+     - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
      - { label: "Date", name: "event_date", widget: "datetime", default: "", format: 'MM-DD-YYYY HH:mm ZZ', date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
      - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
      - { label: "Featured Image", name: "image", widget: "image", media_folder: '/src/static/events', public_folder: '/static/events', required: false }
      - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }
-     - { label: "Body", name: "body", widget: "markdown" }
+     - { label: "Body", name: "body", widget: "markdown", required: false }
      - label: Guests
        name: guests
        widget: list
