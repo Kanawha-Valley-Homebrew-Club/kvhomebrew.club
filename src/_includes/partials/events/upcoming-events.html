@@ -6,13 +6,26 @@
         </div>
     </header>
     <div class="container px-4">
-        <div class="grid grid-cols-3 gap-x-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8">
         {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
+        {% set gridClasses = "flex flex-col mb-10" %}
         {% for event in futureEvents %}
-            {% if loop.index0 < 3 %}
+            {% if loop.index0 < 4 %}
+                {% if loop.index > 3 %}
+                {% set gridClasses = gridClasses + "block lg:hidden" %}
+                {% endif %}
+                <div class="{{ gridClasses }}">
                 {% include 'events--teaser.html' %}
+                </div>
             {% endif %}
         {% endfor %}
         </div>
     </div>
+    <footer>
+        <p class="text-center">
+            {{ component('button', {
+                url: '/events',
+                text: 'View More Events'
+            }) }}
+    </footer>
 </section>
