@@ -34,12 +34,16 @@ collections:
     path: "{{year}}/{{month}}/{{slug}}"
     create: true
     editor:
-      preview: true
+      preview: false
     view_groups:
       - label: Year
         field: event_date
         # groups items based on the value matched by the pattern
         pattern: \d{4}
+    view_filters:
+      - label: "Club Meetings"
+        field: categories
+        pattern: 'club-meeting'
     fields:
      - { label: "Title", name: "title", widget: "string" }
      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
@@ -48,6 +52,16 @@ collections:
      - { label: "Featured Image", name: "image", widget: "image", media_folder: '/src/static/events', public_folder: '/static/events', required: false }
      - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }
      - { label: "Body", name: "body", widget: "markdown", required: false }
+     - label: "Categories"
+       name: "categories"
+       widget: relation
+       multiple: true
+       required: false
+       collection: "taxonomies"
+       file: "event_categories"
+       search_fields: ["categories.*.name"]
+       displayFields: ["categories.*.name"]
+       value_field: "categories.*.id"
      - label: Guests
        name: guests
        widget: list
@@ -122,6 +136,26 @@ collections:
       - { label: 'Membership Year', name: 'membership_year', widget: 'number' }
       - { label: 'Portrait', name: 'portrait', widget: 'image', media_folder: 'static/portraits', choose_url: false, required: false }
       - { label: 'Bio', name: 'bio', widget: 'markdown', required: false }
+
+  - label: "Taxonomies"
+    label_singular: "taxonomy"
+    name: "taxonomies"
+    editor:
+      preview: false
+    files:
+      - label: "Event Categories"
+        name: event_categories
+        file: "src/_data/event_categories.yaml"
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            allow_add: true
+            collapsed: true
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: ID, name: id, widget: string }
+              - { label: Description, name: description, widget: text, required: false }
 
   - label: "Settings"
     label_singular: "Setting"

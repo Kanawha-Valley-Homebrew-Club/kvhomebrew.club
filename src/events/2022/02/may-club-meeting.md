@@ -5,4 +5,6 @@ location: |-
   BridgeValley Advanced Technology Center\
   1201 Science Park Dr, Room 134\
   South Charleston, WV
+categories:
+  - club-meeting
 ---

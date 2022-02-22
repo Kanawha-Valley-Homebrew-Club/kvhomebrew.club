@@ -1,0 +1,7 @@
+categories:
+  - name: Club Meeting
+    id: club-meeting
+    description: Club Meetings are regularly scheduled meetings designed to meet the
+      primary experiential needs of members.
+  - name: Competition
+    id: competition

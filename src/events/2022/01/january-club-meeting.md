@@ -7,6 +7,8 @@ location: |-
   1201 Science Park Dr, Room 134\
   South Charleston, WV
 image: /static/events/aaron-doucett-fjbjbetdogk-unsplash.jpg
+categories:
+  - club-meeting
 resources:
   - title: Tasting Circle Reviews
     url: https://airtable.com/shrCKVhC34Es3vJhE/tblsQerytT3Q51ivN

@@ -7,6 +7,8 @@ location: |-
   1201 Science Park Dr, Room 134\
   South Charleston, WV
 image: /static/events/feb-meeting-off-flavors.jpg
+categories:
+  - club-meeting
 ---
 1. Join us as we re-engage with our off flavors kit, share our latest homebrews and look forward to what 2022 has in store for us.
 
