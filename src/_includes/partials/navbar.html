@@ -38,9 +38,12 @@
             </div>
 
             <!-- Call to Action -->
-            <div class="md:col-span-1 lg:col-span-3 md:flex justify-end text-center text-sm" :class="{ 'block': isOpen, 'hidden': !isOpen }">
+            <div class="md:col-span-1 lg:col-span-3 md:flex justify-end text-center" :class="{ 'block': isOpen, 'hidden': !isOpen }">
                 {% if cta_link.cta_url %}
-                <div>{{ component('button', { url: cta_link.cta_url, text: cta_link.cta_text }) }}</div>
+                <div>{{ component('button', { 
+                    url: cta_link.cta_url, 
+                    text: cta_link.cta_text
+                }) }}</div>
                 {% endif %}
             </div>
         </div>

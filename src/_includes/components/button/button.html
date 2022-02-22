@@ -8,6 +8,6 @@
   {% case 'download' %}
     {% set classes = 'inline-block py-2 pl-4 pr-10 rounded-2xl font-bold text-white bg-download bg-repeat-download' %}
   {% default %}
-    {% set classes = 'inline-block py-2 px-4 rounded-2xl font-bold text-white bg-orange hover:bg-orange_hover' %}
+    {% set classes = 'inline-block py-2 px-4 rounded-md font-bold text-white bg-orange hover:bg-orange_hover' %}
 {% endswitch %}
-<a href="{{ params.url }}" class="{{ classes }} no-underline">{{ buttonText | safe }}</a>
+<a href="{{ params.url }}" class="{{ classes }} {{ params.classes }} no-underline">{{ buttonText | safe }}</a>
