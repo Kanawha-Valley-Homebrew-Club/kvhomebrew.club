@@ -3,10 +3,81 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
+const Image = require("@11ty/eleventy-img");
 const util = require('util');
 const { exit } = require("process");
 
 const eventdateFormat = 'MM-dd-yyyy hh:mm ZZZ';
+
+function imageShortcode({src, alt, cls, styleName, lazy = true}) {
+
+  if(alt === undefined) {
+    // You bet we throw an error on missing alt (alt="" works okay)
+    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+  }
+
+  if (styleName === undefined) {
+    throw new Error(`Missing \`styleName\` on myImage from: ${src}`);
+  }
+
+  let styles = {
+    avatar: {
+      sizes: ""
+    },
+    ad_small: {
+      sizes: [
+        "(max-width: 639px) 590px",
+        "(max-width: 1023px) 350px",
+        "(max-width: 1400px) 290px",
+        "350px"
+      ]
+    },
+    teasers_3: {
+      sizes: [
+        "(max-width: 640px) 510px",
+        "350px"
+      ]
+    },
+    medium_half: {
+      sizes: "(max-width: 767px) 100vw, 600px"
+    },
+    large: {
+      sizes: [
+        "(min-width: 768px) 1024px",
+        "(min-width: 1024px) 1280px"
+      ]
+    }
+  }
+
+  let options = {
+    widths: [350, 640, 768, 1024, 1280],
+    formats: ['webp', 'jpeg'],
+    urlPath: "/static/img/",
+    outputDir: "./_site/static/img/"
+  };
+
+  Image(src, options);
+
+  let sizes = styles[styleName].sizes;
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    decoding: "async",
+  };
+
+  if (cls) {
+    imageAttributes.class = cls;
+  }
+
+  // sometimes hero images should not lazy load if they impact LCP metrics. (top of page)
+  if (lazy == true) {
+    imageAttributes.loading = "lazy";
+  }
+  // get metadata even the images are not fully generated
+  metadata = Image.statsSync(src, options);
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -61,6 +132,13 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("event_month_abbr", (dateObj) => {
+    return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
+      "LLL",
+      { zone: 'America/New_York' }
+    );
+  });
+
   eleventyConfig.addFilter("event_year", (dateObj) => {
     return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
       "yyyy",
@@ -111,6 +189,8 @@ module.exports = function (eleventyConfig) {
 
   // Get the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addShortcode("image", imageShortcode);
 
   // Console log variables
   eleventyConfig.addFilter('console', function(value) {

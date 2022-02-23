@@ -1,15 +1,24 @@
 {%- from "system/component.html" import component -%}
 {% if theme == 'dark' %}
-{% set themeClasses = "border-white" %}
+{% set themeClasses = "border-white text-black" %}
 {% else %}
-{% set themeClasses = "border-black" %}
+{% set themeClasses = "border-black hover:border-opacity-100" %}
 {% endif %}
-<article class="p-4 mt-6 border-thin border-opacity-25 rounded-md text-center md:text-left {{ themeClasses }}">
-    <div class="-mt-10 mb-4">
-        {{ component('datebox', { date: event.data.event_date }) }}
-    </div>
-    <header>
-        <h1 class="text-2xl">
+<article class="relative mt-6 bg-white border-thin border-opacity-25 rounded-md text-center {{ themeClasses }}">
+    {% if event.data.image %}
+    {% image { 
+        src: './src/' + event.data.image, 
+        alt: "",
+        cls: "rounded-t-md",
+        styleName: "large",
+        lazy: true
+    } %}
+    {% endif %}
+    <header class="relative p-4">
+        <div class="-mt-8 mb-4 text-center">
+            {{ component('datebox-micro', { date: event.data.event_date }) }}
+        </div>
+        <h1 class="text-2xl mb-2">
             <a href="{{ event.url | url }}" class="no-underline">
                 {% if event.data.title %}
                     {{ event.data.title }}
@@ -18,9 +27,7 @@
                 {% endif %}
             </a>
         </h1>
-        <p class="mb-4 text-lg">{{ event.data.subtitle }}</p>
+        <p class="text-lg mb-0">{{ event.data.subtitle }}</p>
     </header>
-    <p>
-        {{ component('button', { url: event.url | url, text: 'Details' }) }}
-    </p>
+    <a href="{{ event.url | url }}" class="absolute top-0 left-0 w-full h-full" aria-label="Visit {{ event.data.title }}."></a>
 </article>
