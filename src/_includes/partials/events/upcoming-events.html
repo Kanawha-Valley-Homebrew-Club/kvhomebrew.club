@@ -1,11 +1,11 @@
 {%- from "system/component.html" import component -%}
 <section class="pt-6 pb-12">
-    <header class="mb-16 text-center">
+    <header class="mb-10 text-center">
         <div class="container px-4">
             <h1 class="text-4xl">Upcoming Events</h1>
         </div>
     </header>
-    <div class="container px-4">
+    <div class="container px-4 mb-8 lg:mb-0">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8">
         {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
         {% set gridClasses = "flex flex-col mb-10" %}
@@ -25,7 +25,8 @@
         <p class="text-center">
             {{ component('button', {
                 url: '/events',
-                text: 'View More Events'
+                text: 'View More Events',
+                theme: 'black'
             }) }}
     </footer>
 </section>
