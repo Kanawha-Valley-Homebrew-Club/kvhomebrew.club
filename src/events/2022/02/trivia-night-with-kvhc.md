@@ -6,6 +6,7 @@ location: |-
   The Pallet Bar
   3999 Teays Valley Road
   Teays Valley, WV 25560
+image: /static/events/team-trivia-pallet.jpg
 guests:
   - name: Brad Mills (Team Trivia host)
     website: https://teamtrivia.com/home.php
