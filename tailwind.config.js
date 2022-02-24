@@ -16,6 +16,7 @@ module.exports = {
       'hops-green-grit': "url('/static/theme/hops-green-grit.jpg')",
       'hops-green-muted': "url('/static/theme/hops-green-muted.jpg')",
       'hops-gradient': "linear-gradient(to top, rgba(146, 187, 5, 1), rgba(146, 187, 5, 0) ), url('/static/theme/hops-green-grit.jpg')",
+      'active-item': "linear-gradient(to top, #92BB05 40%, transparent 40%)"
     },
     borderWidth: {
       'thin': '1px',
@@ -34,7 +35,7 @@ module.exports = {
       black: '#252821',
       black_hover: '#101010',
       beige: '#F4EFE4',
-      formfields: '#f3f1ed'
+      formfields: '#F3F1ED'
     },
     fontFamily: {
       'display': ['Alfa Slab One'],

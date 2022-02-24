@@ -1,6 +1,6 @@
 {%- from "system/component.html" import component -%}
 {% set isFront = (params.page.url == '/') %}
-<div class="w-full z-50 lg:py-4 border-solid {{ '' if isFront else 'border-b-thin border-black border-opacity-25' }}"
+<div class="w-full z-50 lg:py-4 border-solid {{ '' if isFront else 'border-b-thin border-black border-opacity-25 lg:bg-white' }}"
 x-data="{ isOpen: false }" :class="{'fixed md:relative t-0 l-0 h-full w-full bg-white': isOpen}" @keydown.escape="isOpen = false">
     <nav class="flex flex-col lg:flex-row h-full lg:h-auto lg:px-8 relative gap-x-16">
         <div class="flex justify-between w-full lg:w-auto px-4 py-4 lg:px-0 lg:py-0">
@@ -25,7 +25,7 @@ x-data="{ isOpen: false }" :class="{'fixed md:relative t-0 l-0 h-full w-full bg-
             {% for item in params.navigation.items %}
                 <li class="block border-t lg:border-0">
                     {% set isActivePage = (item.url + '/') == params.page.url %}
-                    <a href="{{ item.url }}" class="block font-display lg:font-body lg:font-bold text-4xl text-white lg:text-black lg:text-xl no-underline hover:underline">{{ item.text }}</a>
+                    <a href="{{ item.url }}" class="block px-2 py-0 leading-none font-display text-4xl text-white lg:text-xl no-underline hover:bg-active-item lg:text-black {{ 'bg-active-item' if isActivePage else '' }}">{{ item.text }}</a>
                 </li>
             {% endfor %}
             {% if params.cta_link.cta_url %}
