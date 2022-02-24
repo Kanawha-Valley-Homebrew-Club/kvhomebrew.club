@@ -49,7 +49,7 @@ collections:
      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
      - { label: "Date", name: "event_date", widget: "datetime", default: "", format: 'MM-DD-YYYY HH:mm ZZ', date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
      - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
-     - { label: "Featured Image", name: "image", widget: "image", media_folder: '/src/static/events', public_folder: '/static/events', required: false }
+     - { label: "Featured Image", name: "image", widget: "image", media_folder: '/src/static/events', public_folder: '/static/events', default: '/src/static/events/default-club-meeting.jpg', required: false }
      - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }
      - { label: "Body", name: "body", widget: "markdown", required: false }
      - label: "Categories"
