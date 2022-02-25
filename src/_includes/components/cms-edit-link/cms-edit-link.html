@@ -8,8 +8,15 @@ params:
     (function() {
         const cmsUser = localStorage.getItem('netlify-cms-user');
         if (cmsUser) {
-            const editLink = `<a href="/admin/#/collections/{{ params.tag }}/entries/{{ params.fileSlug }}">Edit</a>`;
-            document.getElementById('cms-edit-link').innerHTML = editLink;
+            const editLink = {
+                text: 'Edit',
+                url: '/admin/#/collections/{{ params.tag }}/entries/{{ params.fileSlug }}',
+                classes: 'border inline-block bg-white rounded-md px-3 py-1',
+                render: function() {
+                    return `<a href="${this.url}" class="${this.classes}">${this.text}</a>`;
+                }
+            }
+            document.getElementById('cms-edit-link').innerHTML = editLink.render();
         }
     })();
 </script>
