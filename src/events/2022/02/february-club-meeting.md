@@ -9,7 +9,11 @@ location: |-
 image: /static/events/feb-meeting-off-flavors.jpg
 categories:
   - club-meeting
+guests: []
+resources:
+  - title: Tasting Circle Reviews
+    url: https://airtable.com/shrCKVhC34Es3vJhE
 ---
-1. Join us as we re-engage with our off flavors kit, share our latest homebrews and look forward to what 2022 has in store for us.
+Join us as we re-engage with our off flavors kit, share our latest homebrews and look forward to what 2022 has in store for us.
 
 Room 134 in the ATC is our usual space this spring.
