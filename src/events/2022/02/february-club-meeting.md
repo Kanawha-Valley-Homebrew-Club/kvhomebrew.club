@@ -17,11 +17,3 @@ resources:
 Join us as we re-engage with our off flavors kit, share our latest homebrews and look forward to what 2022 has in store for us.
 
 Room 134 in the ATC is our usual space this spring.
-
-## Meeting Notes
-
-### Christian's Off Flavors Presentation
-
-#### Ethyl Hexanoate
-
-#### Butyric Acid
