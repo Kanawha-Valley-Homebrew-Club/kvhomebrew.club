@@ -1,0 +1,20 @@
+---
+title: Events for Category
+subtitle: Join us for an upcoming event!
+layout: page
+pagination:
+  data: event_categories.categories
+  size: 1
+  alias: category
+permalink: /events/categories/{{ category.id }}/
+eleventyComputed:
+  title: 'Events tagged with "{{ category.name }}"'
+  subtitle: {{ category.description if category.description else '' }}
+---
+
+{% set events = collections.event | filterEventsByCategory(category.id) %}
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+{% for event in events %}
+    {% include 'events--teaser.html' %}
+{% endfor %}
+</div>

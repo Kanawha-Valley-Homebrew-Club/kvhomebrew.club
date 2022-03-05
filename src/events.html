@@ -8,10 +8,10 @@ layout: page
 {%- from "system/component.html" import component -%}
 <section class="py-14">
     {% set theme = 'light' %}
-    <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4">
         {{ component('titlebar', { title: title, subtitle: subtitle }) }}
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-10 mb-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 mb-10">
             {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
             {% for event in futureEvents %}
                 {% include 'events--teaser.html' %}
@@ -22,10 +22,10 @@ layout: page
 
 <section class="py-14 bg-black bg-whitegrit text-white">
     {% set theme = 'dark' %}
-    <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4">
         {{ component('titlebar', { title: 'Past Events', subtitle: 'Explore notes and videos from past events.', textSize: '5xl' }) }} 
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-10 mb-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 mb-10">
             {% set pastEvents = collections.event | pastDates | sort(false, false, 'data.event_date') | reverse %}
             {% for event in pastEvents %}
                 {% include 'events--teaser.html' %}

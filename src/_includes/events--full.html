@@ -4,82 +4,79 @@ header: false
 container: false
 ---
 {%- from "system/component.html" import component -%}
-<article class="py-14">
-    <div class="container mx-auto max-w-5xl px-4">
-        <header class="grid md:grid-cols-3 gap-10 mb-12">
-            <div class="md:col-span-2">
-                <div class="mb-4">
-                    {{ component('button', { url: '/events', text: 'Events', theme: 'left-arrow' }) }}
+<div class="lg:flex">
+    <article class="grid grid-cols-6 gap-x-8 py-4 px-8 bg-beige">
+        <div class="col-start-1 col-end-5 rounded-lg overflow-hidden">
+            <div class="bg-white">
+                {% if youtubeId or image %}
+                <div class="mb-8">
+                    <div class="">
+                    {% if youtubeId %}
+                        {% set videoId = youtubeId %}
+                        {% set videoTitle = title %}
+                        {% include 'blocks/youtube.html' %}
+                    {% elseif image %}
+                        <img src="{{ image }}?nf_resize=smartcrop&w=1000&h=560" />
+                    {% endif %}
+                    </div>
                 </div>
-                <h1 class="text-5xl mb-4">
-                {% if title %}
-                    {{ title }}
-                {% else %}
-                    <abbr title="To Be Determined">TBD</abbr>
                 {% endif %}
-                </h1>
-                {% if subtitle %}
-                <p class="mb-4 text-xl">{{ subtitle }}</p>
-                {% endif %}
+
+                <div class="p-4">
+                    <h1 class="text-5xl mb-4">
+                    {% if title %}
+                        {{ title }}
+                    {% else %}
+                        <abbr title="To Be Determined">TBD</abbr>
+                    {% endif %}
+                    </h1>
+                    {% if subtitle %}
+                    <p class="mb-4 text-xl">{{ subtitle }}</p>
+                    {% endif %}
+
+                    <div class="mb-6 text-lg">
+                        {{ content | safe }}
+                    </div>
+                    {% include 'blocks/sharing.html' %}
+                </div>
             </div>
-            <div class="block">
-                <div class="mb-4 mr-6">
+        </div>
+
+        <div class="col-start-5 col-end-7">
+            <section class="block bg-white p-4 rounded-lg mb-4">
+                <div class="mb-4">
                     {{ component('datebox', { date: event_date }) }}
                 </div>
                 <div class="mb-4">
                     {{ component('field-label', { label: 'Location' }) }}
                     {{ location | markdown | safe }}
                 </div>
-            </div>
-        </header>
-    </div>
+            </section>
 
-    {% if youtubeId or image %}
-    <div class="bg-black bg-whitegrit">
-        <div class="mx-auto max-w-5xl px-4">
-        {% if youtubeId %}
-            {% set videoId = youtubeId %}
-            {% set videoTitle = title %}
-            {% include 'blocks/youtube.html' %}
-        {% elseif image %}
-            <img src="{{ image }}?nf_resize=smartcrop&w=1000&h=560" />
-        {% endif %}
-        </div>
-    </div>
-    {% endif %}
-
-    <div class="mx-auto max-w-5xl px-4">
-    <div class="md:grid lg:grid-cols-3 gap-10 {{ 'pt-10' if youtubeId or image }} pb-10">
-        <div class="col-span-2 mb-5">
-            <div class="mb-6 text-lg">
-                {{ content | safe }}
-            </div>
-            {% include 'blocks/sharing.html' %}
-        </div>
-
-        <div class="mb-5">
             {% if guests %}
-            <div class="mb-6">
+            <section class="bg-white p-4 rounded-lg mb-4">
                 {{ component('field-label', { label: 'Special Guests' }) }}
                 <ol>
                 {% for guest in guests %}
                     <li>{% if guest.website %}<a href="{{ guest.website }}">{% endif %}{{ guest.name }}{% if guest.website %}</a>{% endif %}</li>
                 {% endfor %}
                 </ol>
-            </div>
+            </section>
             {% endif %}
 
             {% if resources %}
-            <div>
+            <section class="bg-white p-4 rounded-lg mb-4">
                 {{ component('field-label', { label: 'Resources' }) }}
                 <ol>
                 {% for resource in resources %}
                     <li>{% if resource.url %}<a href="{{ resource.url }}">{% endif %}{{ resource.title }}{% if resource.url %}</a>{% endif %}</li>
                 {% endfor %}
                 </ol>
-            </div>
+            </section>
             {% endif %}
+
         </div>
-    </div>
-    </div>
-</article>
+    </article>
+
+    {% include 'blocks/events-sidebar.html' %}
+</div>

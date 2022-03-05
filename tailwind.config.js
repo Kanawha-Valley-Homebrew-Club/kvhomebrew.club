@@ -1,13 +1,8 @@
-const { colors } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: {
-    mode: "all",
-    content: ["./**/*.html"],
-    options: {
-      whitelist: [],
-    },
-  },
+  mode: 'jit',
+  content: ["./src/**/*.{html,js}"],
   theme: {
     backgroundImage:  {
       'blackgrit': "url('/static/theme/blackgrit.png')",
@@ -16,7 +11,8 @@ module.exports = {
       'hops-green-grit': "url('/static/theme/hops-green-grit.jpg')",
       'hops-green-muted': "url('/static/theme/hops-green-muted.jpg')",
       'hops-gradient': "linear-gradient(to top, rgba(146, 187, 5, 1), rgba(146, 187, 5, 0) ), url('/static/theme/hops-green-grit.jpg')",
-      'active-item': "linear-gradient(to top, #92BB05 40%, transparent 40%)"
+      'active-item': "linear-gradient(to top, #92BB05 40%, transparent 40%)",
+      'beige-shadow-r': "linear-gradient(to left, rgb(235 229 214), rgba(244, 239, 228, 1) 8px, rgba(244, 239, 228, 1))"
     },
     borderWidth: {
       'thin': '1px',
@@ -62,6 +58,8 @@ module.exports = {
       }
     }
   },
-  variants: {},
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms")
+  ],
 };

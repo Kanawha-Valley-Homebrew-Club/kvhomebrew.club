@@ -153,6 +153,18 @@ module.exports = function (eleventyConfig) {
     ).toLowerCase().replace(/\s/g, "");
   });
 
+  eleventyConfig.addFilter("filterEventsByCategory", (data, category) => {
+    
+    return data.filter((item) => {
+      if (!item.data.categories) { return false; }
+      return item.data.categories.includes(category);
+    });
+  });
+
+  eleventyConfig.addFilter("limit", function(array, limit) {
+    return array.slice(0, limit);
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -195,7 +207,7 @@ module.exports = function (eleventyConfig) {
   // Console log variables
   eleventyConfig.addFilter('console', function(value) {
     const str = util.inspect(value);
-    return `<pre class="block" style="max-height: 500px; overflow-y: scroll;">${unescape(str)}</pre>;`
+    return `<pre class="block" style="max-height: 500px; overflow-y: scroll;">${unescape(str)}</pre>`
   });
 
   // Minify HTML
