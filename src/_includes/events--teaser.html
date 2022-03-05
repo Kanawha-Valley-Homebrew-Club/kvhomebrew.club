@@ -1,15 +1,15 @@
 {%- from "system/component.html" import component -%}
 {% if theme == 'dark' %}
-{% set themeClasses = "border-white text-black" %}
+{% set themeClasses = " text-black" %}
 {% else %}
 {% set themeClasses = "border-black hover:border-opacity-100" %}
 {% endif %}
-<article class="relative mt-6 bg-white border-thin border-opacity-25 rounded-md text-center {{ themeClasses }}">
+<article class="relative mt-6 bg-white border-thin border-opacity-25 overflow-hidden rounded-md text-center {{ themeClasses }}">
     {% if event.data.image %}
     {% image { 
         src: './src/' + event.data.image, 
         alt: "",
-        cls: "rounded-t-md",
+        cls: "rounded-t-sm",
         styleName: "large",
         lazy: true
     } %}
