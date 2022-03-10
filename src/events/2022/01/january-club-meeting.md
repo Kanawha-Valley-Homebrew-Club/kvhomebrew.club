@@ -2,10 +2,13 @@
 title: January Club Meeting
 subtitle: Coal Country Prep
 event_date: 01-27-2022 18:00 -0500
-location: |-
-  BridgeValley Advanced Technology Center\
-  1201 Science Park Dr, Room 134\
-  South Charleston, WV
+address:
+  name: BridgeValley Community & Technical College
+  street1: 1201 Science Park Drive
+  street2: Room 134
+  city: South Charleston
+  state: WV
+  zipcode: 25303
 image: /static/events/aaron-doucett-fjbjbetdogk-unsplash.jpg
 categories:
   - club-meeting

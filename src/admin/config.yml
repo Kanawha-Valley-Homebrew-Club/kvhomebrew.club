@@ -48,7 +48,17 @@ collections:
      - { label: "Title", name: "title", widget: "string" }
      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
      - { label: "Date", name: "event_date", widget: "datetime", default: "", format: 'MM-DD-YYYY HH:mm ZZ', date_format: "MMM D, YYYY", time_format: "h:mma", picker_utc: false }
-     - { label: "Location", name: "location", widget: "markdown", editor_components: [], buttons: ["link"] }
+     - label: "Address"
+       name: "address"
+       widget: object
+       required: false
+       fields:
+         - { label: "Name", name: "name", widget: "string", required: false }
+         - { label: "Street 1", name: "street1", widget: "string" }
+         - { label: "Street 2", name: "street2", widget: "string", required: false }
+         - { label: "City", name: "city", widget: "string" }
+         - { label: "State", name: "state", widget: "string" }
+         - { label: "Zip", name: "zipcode", widget: "number", value_type: int, max: 99999, required: false }
      - { label: "Featured Image", name: "image", widget: "image", media_folder: '/src/static/events', public_folder: '/static/events', default: '/static/events/default-club-meeting.jpg', required: false }
      - { label: "Youtube Embed", name: "youtubeId", widget: "string", required: false }
      - { label: "Body", name: "body", widget: "markdown", required: false }
@@ -156,6 +166,7 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: ID, name: id, widget: string }
               - { label: Description, name: description, widget: text, required: false }
+              - { label: Icon, name: icon, widget: code, required: false, default_language: html, hint: "Add SVG icon code here." }
 
   - label: "Settings"
     label_singular: "Setting"

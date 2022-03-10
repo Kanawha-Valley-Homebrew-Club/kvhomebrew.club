@@ -2,11 +2,16 @@
 title: Trivia Night with KVHC
 subtitle: Live from The Pallet in Teays Valley
 event_date: 03-14-2022 19:00 -0400
-location: |-
-  The Pallet Bar
-  3999 Teays Valley Road
-  Teays Valley, WV 25560
+address:
+  street1: 3999 Teays Valley Road
+  name: The Pallet Bar
+  city: Teays Valley
+  state: WV
+  street2: ""
+  zipcode: 25560
 image: /static/events/team-trivia-pallet.jpg
+categories:
+  - social-event
 guests:
   - name: Brad Mills (Team Trivia host)
     website: https://teamtrivia.com/home.php

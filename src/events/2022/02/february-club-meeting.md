@@ -2,10 +2,13 @@
 title: February Club Meeting
 subtitle: Off Flavors Kit Demo
 event_date: 02-24-2022 18:00 -0500
-location: |-
-  BridgeValley Advanced Technology Center\
-  1201 Science Park Dr, Room 134\
-  South Charleston, WV
+address:
+  name: BridgeValley Community & Technical College
+  street1: 1201 Science Park Drive
+  street2: Room 134
+  city: South Charleston
+  state: WV
+  zipcode: 25303
 image: /static/events/feb-meeting-off-flavors.jpg
 categories:
   - club-meeting

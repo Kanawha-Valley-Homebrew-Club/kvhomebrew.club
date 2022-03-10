@@ -1,11 +1,14 @@
+require('dotenv').config();
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
 const Image = require("@11ty/eleventy-img");
+const slugify = require("@sindresorhus/slugify");
 const util = require('util');
 const { exit } = require("process");
+const GOOGLE_STATICMAPS_KEY = process.env.GOOGLE_STATICMAPS_KEY;
 
 const eventdateFormat = 'MM-dd-yyyy hh:mm ZZZ';
 
@@ -95,6 +98,8 @@ module.exports = function (eleventyConfig) {
     return markdownIt({ html: true }).render(content);
   });
 
+  eleventyConfig.addFilter("slugify", slugify);
+
   // Filters for future dates in Events.
   eleventyConfig.addFilter("futureDates", (events) => {
     return events.filter((event) => {
@@ -132,6 +137,13 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("event_month_2digit", (dateObj) => {
+    return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
+      "LL",
+      { zone: 'America/New_York' }
+    );
+  });
+
   eleventyConfig.addFilter("event_month_abbr", (dateObj) => {
     return DateTime.fromFormat(dateObj, eventdateFormat).toFormat(
       "LLL",
@@ -161,12 +173,50 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter("getCategoryNameById", (id, categories) => {
+    let name;
+    categories.forEach(category => {
+      if (category.id == id) { name = category.name; }
+    });
+    return name;
+  });
+
   eleventyConfig.addFilter("limit", function(array, limit) {
     return array.slice(0, limit);
   });
 
+  eleventyConfig.addFilter("addressToString", (data) => {
+    const address = {}
+    address.name = data.name;
+    address.street1 = data.street1;
+    address.street2 = data.street2;
+    address.city = data.city;
+    address.state = data.state;
+    address.zipcode = data.zipcode;
+
+    const newobj = Object.keys(address).map((k) => {
+      return address[k];
+    }).filter(n => n);
+
+    return newobj.join(", ");
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // Google Maps Static API
+	eleventyConfig.addShortcode("staticmap", function(address, width=500, height=500, zoom=13, maptype="roadmap") {
+    // @todo: Request this map, save it to the filesystem and return the cached path.
+		return `https://maps.googleapis.com/maps/api/staticmap?markers=color:0x92BB05|${encodeURIComponent(address)}&zoom=${zoom}&size=${width}x${height}&maptype=${maptype}&key=${GOOGLE_STATICMAPS_KEY}`;
+	});
+
+  eleventyConfig.addShortcode("googleMapsSearchUrl", function(address) {
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  });
+
+  eleventyConfig.addShortcode("googleMapsDirectionsUrl", function(address) {
+    return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+  });
 
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
