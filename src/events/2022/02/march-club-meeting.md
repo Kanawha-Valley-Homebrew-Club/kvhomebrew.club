@@ -1,6 +1,6 @@
 ---
 title: March Club Meeting
-subtitle: Topics TBA
+subtitle: Learn to Lager!
 event_date: 03-31-2022 18:00 -0400
 address:
   name: Advanced Technology Center
