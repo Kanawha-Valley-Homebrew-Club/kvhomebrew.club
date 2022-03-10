@@ -1,8 +1,7 @@
 categories:
   - name: Club Meeting
     id: club-meeting
-    description: Club Meetings are regularly scheduled meetings designed to meet the
-      primary experiential needs of members.
+    description: Monthly meetings where we enjoy learning about the science of brewing and sharing feedback in the Tasting Circle.
     icon:
       code: >-
         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
