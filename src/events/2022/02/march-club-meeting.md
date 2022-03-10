@@ -14,9 +14,9 @@ categories:
   - club-meeting
 guests: []
 ---
-## Training Agenda
+## Training & Learning
 
-Our best German brewer, Eric Weiss, will presentation the fundamentals of lagering beer.
+Our best German brewer, Eric Weiss, will present the fundamentals of lagering beer.
 
 ## Feedback Circle
 
@@ -26,4 +26,4 @@ If you're looking for feedback on your latest homebrew beers, submit them to the
 
 ## Club Agenda Items
 
-We're be voting on an "Iron Brewer" contest ingredient this month! All participants in the next club contest must use this ingredient in their submission.
+We'll be voting on an "Iron Brewer" contest ingredient this month! All participants in the next club contest must use this ingredient in their submission.
