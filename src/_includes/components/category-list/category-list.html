@@ -1,0 +1,24 @@
+{# 
+params:
+    categories
+    template:
+    theme:
+        template:
+        color:
+#}
+{%- from "system/component.html" import component -%}
+<ul>
+{% for category in params.categories %}
+    <li>
+        {{ component('category-teaser', {
+            id: category.id,
+            name: category.name,
+            icon: category.icon.code,
+            theme: {
+                template: params.theme.template,
+                fillColor: params.theme.color
+            }
+        }) }}
+    </li>
+{% endfor %}
+</ul>

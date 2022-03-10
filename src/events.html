@@ -23,7 +23,7 @@ layout: page
 <section class="py-14 bg-black bg-whitegrit text-white">
     {% set theme = 'dark' %}
     <div class="max-w-6xl mx-auto px-4">
-        {{ component('titlebar', { title: 'Past Events', subtitle: 'Explore notes and videos from past events.', textSize: '5xl' }) }} 
+        {{ component('titlebar', { title: 'Past Events', subtitle: 'Explore notes and videos from past events.', textSizeClass: 'text-5xl' }) }} 
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 mb-10">
             {% set pastEvents = collections.event | pastDates | sort(false, false, 'data.event_date') | reverse %}

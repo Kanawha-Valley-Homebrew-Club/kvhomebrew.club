@@ -27,7 +27,16 @@
                 {% endif %}
             </a>
         </h1>
-        <p class="text-lg mb-0">{{ event.data.subtitle }}</p>
+        <p class="text-lg mb-2">{{ event.data.subtitle }}</p>
+        {% if event.data.categories %}
+        <ul class="flex justify-center gap-x-2">
+            {% for category in event.data.categories %}
+            <li class="bg-beige text-sm py-1 px-2 rounded-md">
+                {{ category | getCategoryNameById(event_categories.categories) }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </header>
     <a href="{{ event.url | url }}" class="absolute top-0 left-0 w-full h-full" aria-label="Visit {{ event.data.title }}."></a>
 </article>

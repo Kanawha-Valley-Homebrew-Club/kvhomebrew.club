@@ -1,0 +1,19 @@
+<div class="h-card">
+    {% if params.address.name %}
+    <div class="p-org font-bold">{{ params.address.name }}</div>
+    {% endif %}
+    <div class="p-street-address">{{ params.address.street1 }}</div>
+    {% if params.address.street2 %}
+    <div class="p-extended-address">{{ params.address.street2 }}</div>
+    {% endif %}
+    <div>
+        <span class="p-locality">{{ params.address.city }}</span>, 
+        <span class="p-region">{{ params.address.state }}</span> 
+        {% if params.address.zipcode %}<span class="p-postal-code">{{ params.address.zipcode }}</span>{% endif %}
+    </div>
+    {% if params.directions == true %}
+    <div class="text-sm text-lime">
+        <a href="{% googleMapsDirectionsUrl params.address | addressToString %}" target="_blank">Get Directions (via Google)</a>
+    </div>
+    {% endif %}
+</div>

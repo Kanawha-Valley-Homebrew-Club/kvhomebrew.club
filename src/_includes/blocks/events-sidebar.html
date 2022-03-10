@@ -1,8 +1,9 @@
-<aside class="lg:w-[360px] shrink-0 py-4 px-2 bg-white lg:toolbar-shadow-l">
-    <div class="lg:sticky top-4">
+{%- from "system/component.html" import component -%}
+<aside class="lg:w-[360px] shrink-0 py-4 px-2 bg-white lg:toolbar-shadow-l border-lime border-t-4">
+    <div class="lg:sticky md:grid grid-cols-2 gap-x-8 lg:block top-4">
         <section class="mb-4 border-b-thin border-black border-opacity-25">
             <div class="flex justify-between px-2">
-                <h1 class="mb-0 font-body font-bold">Upcoming Events</h1>
+                <h1 class="mb-0 font-body font-bold text-xl lg:text-md">Upcoming Events</h1>
                 <div class="justify-self-end text-sm text-lime"><a href="/events" class="" aria-label="View all events">View all</a></div>
             </div>
             <div class="py-2 overflow-y-scroll lg:max-h-[50vh]">
@@ -29,23 +30,18 @@
             </div>
         </section>
 
-        <section class="mb-4 border-b-thin border-black border-opacity-25">
+        <section class="mb-4">
             <div class="px-2">
-                <h1 class="mb-0 font-body font-bold">Categories</h1>
+                <h1 class="mb-0 font-body font-bold text-xl lg:text-md">Event Categories</h1>
             </div>
-            <div class="py-2">
-                <ul>
-                {% for category in event_categories.categories %}
-                    <li>
-                        <a href="/events/categories/{{ category.id }}" class="flex items-center gap-x-4 rounded-md no-underline hover:bg-beige p-2">
-                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#7e7e7e">
-                                <circle cx="10" cy="10" r="10"/>
-                            </svg>
-                            <span class="text-sm font-bold">{{ category.name }}</span>
-                        </a>
-                    </li>
-                {% endfor %}
-                </ul>
+            <div class="py-2 overflow-y-scroll lg:max-h-[40vh]">
+                {{ component('category-list', {
+                    categories: event_categories.categories,
+                    theme: {
+                        template: 'micro-item',
+                        color: '#252821'
+                    }
+                }) }}
             </div>
         </section>
     </div>

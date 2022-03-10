@@ -4,77 +4,111 @@ header: false
 container: false
 ---
 {%- from "system/component.html" import component -%}
-<div class="lg:flex">
-    <article class="grid grid-cols-6 gap-x-8 py-4 px-8 bg-beige">
-        <div class="col-start-1 col-end-5 rounded-lg overflow-hidden">
-            <div class="bg-white">
-                {% if youtubeId or image %}
-                <div class="mb-8">
-                    <div class="">
-                    {% if youtubeId %}
-                        {% set videoId = youtubeId %}
-                        {% set videoTitle = title %}
-                        {% include 'blocks/youtube.html' %}
-                    {% elseif image %}
-                        <img src="{{ image }}?nf_resize=smartcrop&w=1000&h=560" />
-                    {% endif %}
-                    </div>
-                </div>
+{% set classes = {
+    padding: 'px-4 lg:px-8'
+} %}
+<div class="lg:flex bg-beige">
+    <article class="w-full md:p-4 md:mb-12 md:drop-shadow-lg">
+        <div class="md:max-w-3xl mx-auto md:rounded-md bg-white overflow-hidden">
+
+            {% if youtubeId or image %}
+            <div class="">
+                <div class="">
+                {% if youtubeId %}
+                    {% set videoId = youtubeId %}
+                    {% set videoTitle = title %}
+                    {% include 'blocks/youtube.html' %}
+                {% elseif image %}
+                    <img src="{{ image }}?nf_resize=smartcrop&w=1000&h=560" />
                 {% endif %}
-
-                <div class="p-4">
-                    <h1 class="text-5xl mb-4">
-                    {% if title %}
-                        {{ title }}
-                    {% else %}
-                        <abbr title="To Be Determined">TBD</abbr>
-                    {% endif %}
-                    </h1>
-                    {% if subtitle %}
-                    <p class="mb-4 text-xl">{{ subtitle }}</p>
-                    {% endif %}
-
-                    <div class="mb-6 text-lg">
-                        {{ content | safe }}
-                    </div>
-                    {% include 'blocks/sharing.html' %}
                 </div>
             </div>
-        </div>
-
-        <div class="col-start-5 col-end-7">
-            <section class="block bg-white p-4 rounded-lg mb-4">
-                <div class="mb-4">
-                    {{ component('datebox', { date: event_date }) }}
-                </div>
-                <div class="mb-4">
-                    {{ component('field-label', { label: 'Location' }) }}
-                    {{ location | markdown | safe }}
-                </div>
-            </section>
-
-            {% if guests %}
-            <section class="bg-white p-4 rounded-lg mb-4">
-                {{ component('field-label', { label: 'Special Guests' }) }}
-                <ol>
-                {% for guest in guests %}
-                    <li>{% if guest.website %}<a href="{{ guest.website }}">{% endif %}{{ guest.name }}{% if guest.website %}</a>{% endif %}</li>
-                {% endfor %}
-                </ol>
-            </section>
             {% endif %}
 
-            {% if resources %}
-            <section class="bg-white p-4 rounded-lg mb-4">
-                {{ component('field-label', { label: 'Resources' }) }}
-                <ol>
-                {% for resource in resources %}
-                    <li>{% if resource.url %}<a href="{{ resource.url }}">{% endif %}{{ resource.title }}{% if resource.url %}</a>{% endif %}</li>
-                {% endfor %}
-                </ol>
-            </section>
-            {% endif %}
+            <header class="pt-8 {{ classes.padding }}">            
+                <div class="-mt-20 mb-4">
+                    {{ component('datebox', { date: event_date, classes: 'shadow-md' }) }}
+                </div>
 
+                <h1 class="text-4xl mb-2">
+                {% if title %}
+                    {{ title }}
+                {% else %}
+                    <abbr title="To Be Announced">TBA</abbr>
+                {% endif %}
+                </h1>
+                {% if subtitle %}
+                <p class="text-xl mb-2">{{ subtitle }}</p>
+                {% endif %}
+
+                {% if categories %}
+                <ul class="flex gap-x-2 mb-4">
+                    {% for category in categories %}
+                    <li class="bg-beige text-sm py-1 px-2 rounded-md">
+                        <a href="/events/categories/{{ category }}" class="no-underline">
+                        {{ category | getCategoryNameById(event_categories.categories) }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </header>
+
+            <div class="mb-6 text-lg markdown-field {{ classes.padding }}">
+                {{ content | safe }}
+                {% include 'blocks/sharing.html' %}
+            </div>
+
+            <div class="md:grid grid-cols-2 gap-x-8 {{ classes.padding }} py-8">
+                <div>
+                    {% if address %}
+                    <section class="mb-8">
+                        {{ component('field-label', { label: 'Location' }) }}
+                        <div class="border-thin border-black/25 rounded-md overflow-hidden">
+                            <div class=""> 
+                                <a href="{% googleMapsSearchUrl address | addressToString %}" target="_blank" class="">
+                                    <img src="{% staticmap address | addressToString, 600, 400, 14 %}">
+                                </a>
+                            </div>
+                            <div class="p-4">
+                                {{ component('address', {
+                                    address: address,
+                                    directions: true
+                                }) }}
+                            </div>
+                        </div>
+                    </section>
+                    {% endif %}
+                </div>
+
+                <div>
+                    {% if guests %}
+                    <section class="mb-8">
+                        {{ component('field-label', { label: 'Special Guests' }) }}
+                        <ol>
+                        {% for guest in guests %}
+                            <li>
+                            {% if guest.website %}<a href="{{ guest.website }}">{% endif %}
+                            {{ guest.name }}
+                            {% if guest.website %}</a>{% endif %}
+                            </li>
+                        {% endfor %}
+                        </ol>
+                    </section>
+                    {% endif %}
+
+                    {% if resources %}
+                    <section class="mb-8">
+                        {{ component('field-label', { label: 'Resources' }) }}
+                        <ol>
+                        {% for resource in resources %}
+                            <li>{% if resource.url %}<a href="{{ resource.url }}">{% endif %}{{ resource.title }}{% if resource.url %}</a>{% endif %}</li>
+                        {% endfor %}
+                        </ol>
+                    </section>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </article>
 

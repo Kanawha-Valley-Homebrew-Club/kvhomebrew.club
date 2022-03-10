@@ -1,4 +1,6 @@
 <header class="mb-14 text-center">
-    <h1 class="text-{{ params.textSize if params.textSize else '6xl' }} mb-">{{ params.title }}</h1>
+    <h1 class="{{ params.textSizeClass if params.textSizeClass else 'text-6xl' }}">{{ params.title }}</h1>
+    {% if params.subtitle %}
     <p class="text-xl">{{ params.subtitle }}</p>
+    {% endif %}
 </header>
