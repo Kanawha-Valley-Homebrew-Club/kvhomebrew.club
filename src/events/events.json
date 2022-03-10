@@ -2,5 +2,6 @@
     "layout": "events--full",
     "tags": [
         "event"
-    ]
+    ],
+    "permalink": "events/{{event_date | event_year}}/{{event_date | event_month_2digit}}/{{title | slugify}}/"
 }
