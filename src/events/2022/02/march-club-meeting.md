@@ -12,4 +12,18 @@ address:
 image: /static/events/hops-glasses_photo-1571767454098-246b94fbcf70.jpeg
 categories:
   - club-meeting
+guests: []
 ---
+## Training Agenda
+
+Our best German brewer, Eric Weiss, will presentation the fundamentals of lagering beer.
+
+## Feedback Circle
+
+If you're looking for feedback on your latest homebrew beers, submit them to the Feedback Circle! (otherwise, save them for social hour).
+
+* [Tastings Notes Form](/tastings)
+
+## Club Agenda Items
+
+We're be voting on an "Iron Brewer" contest ingredient this month! All participants in the next club contest must use this ingredient in their submission.
