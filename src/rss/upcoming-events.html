@@ -1,0 +1,39 @@
+---json
+{
+  "permalink": "rss/upcoming-events.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Upcoming Events",
+    "subtitle": "Upcoming events from the Kanawha Valley Homebrew Club.",
+    "url": "https://kvhomebrew.club/events",
+    "feedUrl": "https://kvhomebrew.club/rss/upcoming-events.xml",
+    "author": {
+      "name": "Kanawha Valley Homebrew Club",
+      "email": "kvhomebrew@gmail.com"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for event in collections.event | futureDates | sort(false, false, 'data.event_date') %}
+  {% set absolutePostUrl %}{{ event.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ event.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ event.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ event.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

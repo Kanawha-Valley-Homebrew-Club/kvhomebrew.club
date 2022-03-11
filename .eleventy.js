@@ -6,6 +6,7 @@ const htmlmin = require("html-minifier");
 const markdownIt = require('markdown-it');
 const Image = require("@11ty/eleventy-img");
 const slugify = require("@sindresorhus/slugify");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const util = require('util');
 const { exit } = require("process");
 const GOOGLE_STATICMAPS_KEY = process.env.GOOGLE_STATICMAPS_KEY;
@@ -203,6 +204,13 @@ module.exports = function (eleventyConfig) {
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // RSS Plugin
+  eleventyConfig.addPlugin(pluginRss, {
+    posthtmlRenderOptions: {
+      closingSingleTag: "default" // opt-out of <img/>-style XHTML single tags
+    }
+  });
 
   // Google Maps Static API
 	eleventyConfig.addShortcode("staticmap", function(address, width=500, height=500, zoom=13, maptype="roadmap") {
