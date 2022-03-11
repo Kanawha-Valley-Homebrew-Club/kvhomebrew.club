@@ -2,6 +2,9 @@
 layout: page
 header: false
 container: false
+eleventyComputed:
+     meta:
+        image: "{% if image %}https://kvhomebrew.club{{image}}{% endif %}"
 ---
 {%- from "system/component.html" import component -%}
 {% set classes = {

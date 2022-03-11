@@ -88,6 +88,12 @@ collections:
        fields:
          - { label: Title, name: title, widget: string }
          - { label: URL, name: url, widget: string }
+     - label: "Metadata"
+       name: "meta"
+       widget: "object"
+       collapsed: true
+       fields:
+         - { label: "Description", name: "description", widget: "text", required: false, hint: "This description is most often used beneath search results and when this page is shown on social networks." }
 
   - label: "Recipes"
     label_singular: "Recipe"

@@ -18,6 +18,9 @@ guests:
 resources:
   - url: http://thepallet.bar/
     title: The Pallet Bar
+meta:
+  description: Join us for an evening of Trivia at one of the best craft been
+    hangouts in southern West Virginia.
 ---
 Join us for an evening of Trivia at one of the best craft been hangouts in southern West Virginia. Join our team, bring a few friends to create your own, or stop by to say hello and laugh at us as we struggle to answer the most basic of questions about pop culture and 6th grade physics concepts.
 

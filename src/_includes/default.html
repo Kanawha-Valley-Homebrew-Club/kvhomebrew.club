@@ -12,10 +12,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <!-- Meta Tags -->
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:type" content="website" />
+    {% if meta.description %}
+    <meta name="description" content="{{meta.description}}"/>
+    <meta property="og:description" content="{{meta.description}}"/>
     {% endif %}
+    <meta property="og:url" content="https://kvhomebrew.club{{ page.url }}">
+    {% if meta.image %}
+    <meta property="og:image" content="{{meta.image}}">
+    {% endif %}
+
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     {% if prism == true %}
