@@ -166,6 +166,12 @@ module.exports = function (eleventyConfig) {
     ).toLowerCase().replace(/\s/g, "");
   });
 
+  // Wed, 02 Oct 2002 08:00:00 EST
+  // "ccc dd LLL yyyy HH:mm:ss"
+  eleventyConfig.addFilter("dateToRfc822", (dateObj) => {
+    return dateObj.toUTCString();
+  });
+
   eleventyConfig.addFilter("filterEventsByCategory", (data, category) => {
     
     return data.filter((item) => {
@@ -260,6 +266,7 @@ module.exports = function (eleventyConfig) {
   // Get the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Eleventy Image plugin
   eleventyConfig.addShortcode("image", imageShortcode);
 
   // Console log variables
