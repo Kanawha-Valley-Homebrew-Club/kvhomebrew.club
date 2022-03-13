@@ -7,7 +7,7 @@ address:
   city: South Charleston
   state: WV
   zipcode: 25309
-image: /static/events/cookout-grill.avif
+image: /static/events/cookout-grill.jpg
 categories: []
 meta:
   description: Join us for our annual club cookout.
