@@ -32,11 +32,12 @@
       <pubDate>{{ event.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
       {% if event.data.image %}
+      {% set imageSource %}./src/{{event.data.image}}{% endset %}
       <media:content 
         xmlns:media="http://search.yahoo.com/mrss/" 
         medium="image" 
         type="image/jpg" 
-        url="https://kvhomebrew.club{{ event.data.image }}" />
+        url="{{ imageSource | rssImagePath }}" />
       {% endif %}
       <description>{% if event.data.subtitle %}{{event.data.subtitle}}{% else %}Topics To Be Announced{% endif %}</description>
     </item>

@@ -83,6 +83,21 @@ function imageShortcode({src, alt, cls, styleName, lazy = true}) {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
+const rssImage = (src) => {
+
+  let options = {
+    formats: ["jpeg"],
+    widths: [600],
+    urlPath: '/rss/img/',
+    outputDir: './src/static/rss/img/'
+  };
+  
+  Image(src, options);
+  let metadata = Image.statsSync(src, options);
+
+  return 'https://kvhomebrew.club/static' + metadata.jpeg[0].url;
+}
+
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
@@ -250,6 +265,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy Image Folders to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
+  eleventyConfig.addPassthroughCopy("./src/static/rss");
   eleventyConfig.addPassthroughCopy("./src/static/portraits");
   eleventyConfig.addPassthroughCopy("./src/static/recipes");
   eleventyConfig.addPassthroughCopy("./src/static/events");
@@ -268,6 +284,9 @@ module.exports = function (eleventyConfig) {
 
   // Eleventy Image plugin
   eleventyConfig.addShortcode("image", imageShortcode);
+
+  // Returns the path for a resized image for RSS feeds
+  eleventyConfig.addFilter("rssImagePath", rssImage);
 
   // Console log variables
   eleventyConfig.addFilter('console', function(value) {
