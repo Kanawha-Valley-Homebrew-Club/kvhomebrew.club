@@ -88,14 +88,14 @@ const rssImage = (src) => {
   let options = {
     formats: ["jpeg"],
     widths: [600],
-    urlPath: '/rss/img/',
-    outputDir: './src/static/rss/img/'
+    urlPath: '/static/rss/img/',
+    outputDir: './_site/static/rss/img/'
   };
   
   Image(src, options);
   let metadata = Image.statsSync(src, options);
 
-  return 'https://kvhomebrew.club/static' + metadata.jpeg[0].url;
+  return 'https://kvhomebrew.club' + metadata.jpeg[0].url;
 }
 
 module.exports = function (eleventyConfig) {
