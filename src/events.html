@@ -11,9 +11,12 @@ layout: page
     <div class="max-w-6xl mx-auto px-4">
         {{ component('titlebar', { title: title, subtitle: subtitle }) }}
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 mb-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 mb-10">
             {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
             {% for event in futureEvents %}
+                {% if (loop.index == 3) %}
+                {% include 'blocks/subscribe-teaser.html' %}
+                {% endif %}
                 {% include 'events--teaser.html' %}
             {% endfor %}
         </div>

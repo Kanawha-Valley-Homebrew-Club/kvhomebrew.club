@@ -3,3 +3,5 @@ items:
     url: /events
   - text: Contact
     url: /contact-us
+  - text: Susbcribe
+    url: /subscribe

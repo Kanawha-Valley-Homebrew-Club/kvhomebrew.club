@@ -4,7 +4,7 @@
 {% else %}
 {% set themeClasses = "border-black hover:border-opacity-100" %}
 {% endif %}
-<article class="relative mt-6 bg-white border-thin border-opacity-25 overflow-hidden rounded-md text-center {{ themeClasses }}">
+<article class="relative mb-8 bg-white border-thin border-opacity-25 overflow-hidden rounded-md text-center {{ themeClasses }}">
     {% if event.data.image %}
     {% image { 
         src: './src/' + event.data.image, 
