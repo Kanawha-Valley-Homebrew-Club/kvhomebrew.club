@@ -8,7 +8,9 @@ address:
   state: WV
   zipcode: 25309
 image: /static/events/cookout-grill.jpg
-categories: []
+categories:
+  - club-meeting
+  - social-event
 meta:
   description: Join us for our annual club cookout.
 ---
