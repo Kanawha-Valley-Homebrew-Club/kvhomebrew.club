@@ -21,7 +21,7 @@
     <description>{{ metadata.subtitle }}</description>
     <link>{{ metadata.url }}</link>
     <atom:link href="{{ metadata.feedUrl }}" rel="self" type="application/rss+xml" />
-    <lastBuildDate>{{ collections.event | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
+    <lastBuildDate>{{ helpers.currentDateTime() }}</lastBuildDate>
     <webMaster>{{ metadata.author.email }} ({{ metadata.author.name }})</webMaster>
     {%- for event in collections.event | futureDates | sort(false, false, 'data.event_date') %}
     {% set absolutePostUrl %}{{ event.url | url | absoluteUrl(metadata.url) }}{% endset %}
@@ -29,7 +29,7 @@
     <item>
       <title>{{ eventDate }}: {{ event.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <pubDate>{{ event.date | dateToRfc822 }}</pubDate>
+      <pubDate>{{ helpers.currentDateTime() }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
       {% if event.data.image %}
       {% set imageSource %}./src/{{event.data.image}}{% endset %}
