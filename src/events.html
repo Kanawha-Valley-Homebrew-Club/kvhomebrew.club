@@ -6,7 +6,7 @@ container: false
 layout: page
 ---
 {%- from "system/component.html" import component -%}
-<section class="py-14">
+<section class="pt-14 pb-8">
     {% set theme = 'light' %}
     <div class="max-w-6xl mx-auto px-4">
         {{ component('titlebar', { title: title, subtitle: subtitle }) }}
@@ -22,6 +22,20 @@ layout: page
         </div>
     </div>
 </section>
+
+<aside class="py-8 bg-white border-t-thin border-black border-opacity-25">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="md:flex justify-between items-center text-center bg-white rounded-lg">
+            <p class="mb-4 md:mb-0 font-display text-lg md:text-xl">Are we missing an upcoming event? Help us out!</p>
+            <div>
+                {{ component('button', {
+                    text: 'Suggest an event',
+                    url: '/forms/suggest-an-event/'
+                }) }}
+            </div>
+        </div>
+    </div>
+</aside>
 
 <section class="py-14 bg-black bg-whitegrit text-white">
     {% set theme = 'dark' %}
