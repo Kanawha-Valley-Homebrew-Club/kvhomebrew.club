@@ -197,6 +197,12 @@ label {
   display: block;
 }
 
+.label__text--required::after {
+  content: '*';
+  padding-left: 0.2em;
+  color: red;
+}
+
 input:active,
 input:focus,
 select:active,
@@ -210,9 +216,15 @@ input[type=text],
 input[type=email],
 input[type=tel],
 input[type=textarea],
+input[type=datetime-local],
+input[type=url],
 select {
   @apply p-2 border-black border-b-2 border-opacity-25 bg-formfields;
   width: 100%;
+}
+
+input[type=file] {
+  @apply p-2 border-black border-thin border-b-2 border-opacity-25 bg-formfields;
 }
 
 input[type=checkbox] {
@@ -235,6 +247,10 @@ fieldset {
 
 legend {
   @apply font-display;
+}
+
+.description {
+  @apply text-sm;
 }
 
 .form-field {

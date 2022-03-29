@@ -1,0 +1,96 @@
+<form name="suggest-event" method="POST" data-netlify="true" netlify-honeypot="robo-field" enctype="multipart/form-data">
+    <p class="hidden">
+        <label>Don’t fill this out if you’re human: <input name="robo-field" /></label>
+    </p>
+    <p><span class="text-[red]">*</span> <span class="text-sm">Required Field</span></p>
+    <fieldset>
+        <legend>Your Contact Information</legend>
+        <p class="description">We'll only contact you if we have questions about your event.</p>
+        <div class="grid md:grid-cols-2 gap-x-8">
+            <div class="form-field">
+                <label class="relative">
+                    <div class="label__text">Name </div>
+                    <input type="text" name="name" />
+                </label>
+            </div>
+            <div class="form-field">
+                <label>
+                    <div class="label__text">Email </div>
+                    <input type="email" name="email" />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Event Information</legend>
+        <!-- Event Name -->
+        <div class="form-field">
+            <label>
+                <div class="label__text label__text--required">Event Name </div>
+                <input name="name" type="text" required />
+            </label>
+        </div>
+        <!-- Event Datetime -->
+        <div class="form-field">
+            <label>
+                <div class="label__text label__text--required">Date and Time </div>
+                <input type="datetime-local"
+                    name="datetime" required />
+            </label>
+            <input type="hidden" id="timezone" name="timezone" value="-05:00" />
+        </div>
+        <!-- Location -->
+        <div class="form-field">
+            <label>
+                <div class="label__text label__text--required">Location </div>
+                <textarea name="location" rows="4" required></textarea>
+            </label>
+            <div class="description">Where is your event? A street address is ideal.</div>
+        </div>
+        <!-- Description -->
+        <div class="form-field">
+            <label>
+                <div class="label__text label__text--required">Description </div>
+                <textarea name="description" rows="10" required></textarea>
+            </label>
+            <div class="description">Tell us all about this event. Pour your heart out!</div>
+        </div>
+        <!-- Categories -->
+        <div class="form-field">
+            <label>
+                <div class="label__text">Categories </div>
+                <div class="block">
+                    {% for category in event_categories.categories %}
+                    <label class="flex flex-row pb-2" for="categories.{{ category.id }}">
+                        <input type="checkbox" class="mt-1 mr-2" name="categories.{{ category.id }}" id="categories.{{ category.id }}">
+                        <span>{{ category.name }}</span>
+                    </label>
+                    {% endfor %}
+                    <label class="flex flex-row pb-2" for="categories.other">
+                        <input type="checkbox" class="mt-1 mr-2" name="categories.other" id="categories.other">
+                        <span>Other</span>
+                    </label>
+                </div>
+            </label>
+        </div>
+        <!-- Promo photo -->
+        <div class="form-field">
+            <label>
+                <div class="label__text">Promo Image </div>
+                <input name="promo_image" type="file" accept="image/*" />
+            </label>
+            <div class="description">If you have a great image or graphic for this event we may use it!</div>
+        </div>
+        <!-- More info Link -->
+        <div class="form-field">
+            <label>
+                <div class="label__text">Event URL </div>
+                <input name="url" type="url" />
+            </label>
+            <div class="description">If this event has a website with additional information we'll use it!</div>
+        </div>
+    </fieldset>
+    <div>
+        <button type="submit" class="w-full">Submit</button>
+    </div>
+</form>
