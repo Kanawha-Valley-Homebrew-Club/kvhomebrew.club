@@ -85,7 +85,7 @@ eleventyComputed:
                 </div>
 
                 <div>
-                    {% if guests %}
+                    {% if guests | length > 0 %}
                     <section class="mb-8">
                         {{ component('field-label', { label: 'Special Guests' }) }}
                         <ol>
