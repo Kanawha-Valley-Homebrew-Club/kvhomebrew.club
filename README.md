@@ -1,3 +1,7 @@
+![](https://raw.githubusercontent.com/Kanawha-Valley-Homebrew-Club/kvhomebrew.club/master/src/static/theme/logo-horizontal.svg)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/befd77ac-2628-4f90-8ba3-804860f24cc4/deploy-status)](https://app.netlify.com/sites/kvhomebew/deploys)
+
 # Neat Starter
 
 Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwind CSS
@@ -17,7 +21,7 @@ Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwin
 | ------------------------------------------------------------------------------------------------------------- |
 
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/surjithctly/neat-starter&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/Kanawha-Valley-Homebrew-Club/kvhomebrew.club&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" /></a>
 
 ## Getting Started
 
@@ -57,4 +61,4 @@ npm run start
 
 ## Author
 
-Surjith S M ( [@surjithctly](https://surjithctly.in/) )
+Aaron Silber ( [@aaronlsilber](https://twitter.com/aaronlsilber/) )

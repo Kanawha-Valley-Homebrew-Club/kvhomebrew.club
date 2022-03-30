@@ -203,6 +203,16 @@ module.exports = function (eleventyConfig) {
     return name;
   });
 
+  eleventyConfig.addFilter("getCategoryFieldValues", (categories, field) => {
+    return JSON.stringify(categories.map(category => {
+      return category[field];
+    }));
+  });
+
+  eleventyConfig.addFilter("jsonStringify", (data) => {
+    return JSON.stringify(data);
+  });
+
   eleventyConfig.addFilter("limit", function(array, limit) {
     return array.slice(0, limit);
   });

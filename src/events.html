@@ -10,15 +10,35 @@ layout: page
     {% set theme = 'light' %}
     <div class="max-w-6xl mx-auto px-4">
         {{ component('titlebar', { title: title, subtitle: subtitle }) }}
+        
+        <div class="" x-data="{ 
+            categories: {{ event_categories.categories | getCategoryFieldValues('id') }},
+            activeCategories: {{ event_categories.categories | getCategoryFieldValues('id') }}
+        }" aria-hidden="true">
+            <div class="mb-8 pb-2 border-b-thin border-solid border-black/10 text-center md:text-left">
+                <div>
+                    <div class="md:inline-block mb-2 mr-4 text-sm font-body font-bold">Categories</div>
+                    {% for category in event_categories.categories %}
+                    <label class="inline-block cursor-pointer">
+                        <input type="checkbox" value="{{ category.id }}" x-model="activeCategories" class="sr-only peer" checked />
+                        <div class="py-1 px-3 text-sm text-black/70 font-bold rounded-full bg-white shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1)] peer-checked:bg-lime peer-checked:text-white">{{ category.name }}</div>
+                    </label>
+                    {% endfor %}
+                    <div class="inline-block py-1 px-3 text-sm underline cursor-pointer" @click="activeCategories = categories">Select All</div>
+                </div>
+            </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 mb-10">
-            {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
-            {% for event in futureEvents %}
-                {% if (loop.index == 3) %}
-                {% include 'blocks/subscribe-teaser.html' %}
-                {% endif %}
-                {% include 'events--teaser.html' %}
-            {% endfor %}
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 mb-10">
+                {% set futureEvents = collections.event | futureDates | sort(false, false, 'data.event_date') %}
+                {% for event in futureEvents %}
+                    {% if (loop.index == 3) %}
+                    {% include 'blocks/subscribe-teaser.html' %}
+                    {% endif %}
+                    <template x-if="activeCategories.some(item => {{event.data.categories | jsonStringify}}.includes(item))">
+                    {% include 'events--teaser.html' %}
+                    </template>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </section>
