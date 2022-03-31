@@ -18,12 +18,6 @@ guests: []
 
 Our best German brewer, Eric Weiss, will present the fundamentals of lagering beer.
 
-## Feedback Circle
-
-If you're looking for feedback on your latest homebrew beers, submit them to the Feedback Circle! (otherwise, save them for social hour).
-
-* [Tastings Notes Form](/tastings)
-
 ## Club Agenda Items
 
 We'll be voting on an "Iron Brewer" contest ingredient this month! All participants in the next club contest must use this ingredient in their submission.
