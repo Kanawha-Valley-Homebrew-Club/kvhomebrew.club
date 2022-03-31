@@ -63,7 +63,11 @@ eleventyComputed:
                 {% if 'club-meeting' in categories %}
                 <section class="flex mb-6 border-thin border-black/10 rounded-md bg-beige overflow-hidden" x-data="{ 
                     info: false,
-                    event_time: '{{ event_date }}', 
+                    eventEndTime() { 
+                        var endT = new Date('{{ event_date }}');
+                        endT.setTime(endT.getTime() + (2*60*60*1000));
+                        return endT;
+                    }, 
                     now() { return new Date(); }
                 }">
                     <div class="w-3 bg-lime">
@@ -81,10 +85,10 @@ eleventyComputed:
                                     <p>We find this process makes sharing more comfortable for inexperienced brewers, encourages quality feedback, and prepares brewers for competitions. <a href="/contact-us">Join us</a> to see how it's done!</p>
                                 </div>
                             </template>
-                            <template x-if="Date.parse(event_time) >= Date.parse(now())">
+                            <template x-if="Date.parse(eventEndTime()) >= Date.parse(now())">
                                 <p class="mb-0"><a href="https://airtable.com/shr5eVlDpJqwHp4SY">Give Feedback</a></p>
                             </template>
-                            <template x-if="Date.parse(event_time) < Date.parse(now())">
+                            <template x-if="Date.parse(eventEndTime()) < Date.parse(now())">
                                 <p class="mb-0"><a href="https://airtable.com/shrCKVhC34Es3vJhE/tblsQerytT3Q51ivN">Get the Results</a></p>
                             </template>
                         </div>
