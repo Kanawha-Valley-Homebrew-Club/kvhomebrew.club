@@ -87,7 +87,8 @@ collections:
        collapsed: true
        fields:
          - { label: Title, name: title, widget: string }
-         - { label: URL, name: url, widget: string }
+         - { label: URL, name: url, widget: string, required: false }
+         - { label: File, name: file, widget: file, required: false }
      - label: "Metadata"
        name: "meta"
        widget: "object"

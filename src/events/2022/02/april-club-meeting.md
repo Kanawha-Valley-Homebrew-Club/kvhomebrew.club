@@ -12,4 +12,10 @@ address:
 image: /static/events/beer-bubbles_1571613316887-6f8d5cbf7ef7.jpeg
 categories:
   - club-meeting
+resources:
+  - file: sensory-kit-instructional-leaflet-2019.pdf
+    title: Sensory Kit Instructions
+    url: ""
+  - file: dms-and-ethyl-acetate.pdf
+    title: DMS and Ethyl Acetate Notes
 ---

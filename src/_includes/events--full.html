@@ -142,7 +142,12 @@ eleventyComputed:
                         {{ component('field-label', { label: 'Resources' }) }}
                         <ol>
                         {% for resource in resources %}
-                            <li>{% if resource.url %}<a href="{{ resource.url }}">{% endif %}{{ resource.title }}{% if resource.url %}</a>{% endif %}</li>
+                            {% if resource.url %}
+                            <li><a href="{{ resource.url }}">{{ resource.title }}</a></li>
+                            {% endif %}
+                            {% if resource.file %}
+                            <li><a href="{{ resource.file }}">{{ resource.title }}</a></li>
+                            {% endif %}
                         {% endfor %}
                         </ol>
                     </section>
