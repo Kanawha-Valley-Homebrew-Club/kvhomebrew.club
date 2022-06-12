@@ -14,7 +14,7 @@ categories:
 meta:
   description: Join us for our annual club cookout.
 ---
-[h](https://m.signupgenius.com/#!/showRSVPSignUp/60b0949a4a82aa4f94-kvhc3)he club will supply Hamburgers (beef), Hotdogs (beef) and BT\
+Th[h](https://m.signupgenius.com/#!/showRSVPSignUp/60b0949a4a82aa4f94-kvhc3)he club will supply Hamburgers (beef), Hotdogs (beef) and BT\
 Message Jedidiah if you cannot eat beef (I will have a few veggie burgers too).
 
 Please bring sides/desserts as this is a pot luck type event.
