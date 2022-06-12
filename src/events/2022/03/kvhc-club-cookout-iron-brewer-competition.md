@@ -14,9 +14,13 @@ categories:
 meta:
   description: Join us for our annual club cookout.
 ---
-<https://m.signupgenius.com/#!/showRSVPSignUp/60b0949a4a82aa4f94-kvhc3>The club will supply Hamburgers (beef), Hotdogs (beef) and Buns for all.\
+[h](https://m.signupgenius.com/#!/showRSVPSignUp/60b0949a4a82aa4f94-kvhc3)he club will supply Hamburgers (beef), Hotdogs (beef) and BT\
 Message Jedidiah if you cannot eat beef (I will have a few veggie burgers too).
 
-Please bring sides/desserts as this is a pot luck type event. (Sign up: COMING SOON)
+Please bring sides/desserts as this is a pot luck type event.
+
+﻿﻿<https://m.signupgenius.com/#!/showRSVPSignUp/60b0949a4a82aa4f94-kvhc3>
+
+
 
 We will do a "People's Choice" judging of our Iron Brewer Beers , so make sure they are ready (and there is enough to share) here.
