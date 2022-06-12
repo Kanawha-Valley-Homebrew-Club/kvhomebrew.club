@@ -21,6 +21,4 @@ Please bring sides/desserts as this is a pot luck type event.
 
 ﻿﻿<https://m.signupgenius.com/#!/showRSVPSignUp/60b0949a4a82aa4f94-kvhc3>
 
-
-
 We will do a "People's Choice" judging of our Iron Brewer Beers , so make sure they are ready (and there is enough to share) here.
