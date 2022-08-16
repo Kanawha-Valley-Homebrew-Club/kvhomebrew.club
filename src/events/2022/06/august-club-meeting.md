@@ -9,7 +9,7 @@ address:
   city: Cross Lanes
   state: WV
   zipcode: 25313
-image: /static/events/default-club-meeting.jpg
+image: /static/events/event-teaser.jpg
 categories:
   - club-meeting
 ---
