@@ -8,7 +8,7 @@ address:
   city: Cross Lanes
   state: WV
   zipcode: 25313
-image: /static/events/event-teaser.jpg
+image: /static/events/event-teaser_riverbend-malt-house.jpg
 categories:
   - club-meeting
 guests:
