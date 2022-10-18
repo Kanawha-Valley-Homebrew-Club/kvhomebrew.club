@@ -8,6 +8,8 @@ address:
   city: Cross Lanes
   state: WV
 image: /static/events/event-teaser.jpg
+categories:
+  - club-meeting
 ---
 This month's meeting will be 1 week earlier than usual at Breathe Wine in Cross Lanes. To be transparent, we wanted for all of the officer's to able to attend this meeting as it is going to be very important for the future of the club.
 
