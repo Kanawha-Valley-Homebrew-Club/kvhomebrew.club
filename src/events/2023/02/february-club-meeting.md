@@ -11,5 +11,8 @@ address:
 image: /static/events/beer.jpg
 categories:
   - club-meeting
+resources:
+  - title: Tasting Circle Reviews
+    url: https://airtable.com/shrCKVhC34Es3vJhE/tblsQerytT3Q51ivN
 ---
 During this month's meeting we will have our regular business and tasting circle, but the emphasis will be on our “Coal Country” submissions. We hope to see you there!
