@@ -9,5 +9,7 @@ address:
   state: WV
   zipcode: 25302
 image: /static/events/hops-glasses_photo-1571767454098-246b94fbcf70.jpeg
+categories:
+  - club-meeting
 ---
 J﻿oin us for our monthly meeting at CNB. We will be doing our tasting circle and presentation on kegging. Will see you there!
