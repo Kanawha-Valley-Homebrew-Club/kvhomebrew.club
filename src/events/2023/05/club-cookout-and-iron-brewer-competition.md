@@ -1,7 +1,7 @@
 ---
 title: Club Cookout and Iron Brewer Competition
 subtitle: 2023 Iron Brewer Comp and Club Cookout
-event_date: 06-17-2023 12:00 -0400
+event_date: 06-17-2023 11:00 -0400
 address:
   name: "Little Creek Park Shelter #1"
   street1: 1 Little Creek Park Road
