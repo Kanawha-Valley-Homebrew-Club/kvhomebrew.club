@@ -9,5 +9,7 @@ address:
   state: WV
   zipcode: 25302
 image: /static/events/default-club-meeting.jpg
+categories:
+  - club-meeting
 ---
 J﻿oin us for our monthly meeting at charleston nano brewery. Meeting is from 6:30 to 8:30. Bring a homebrew for our tasting circle and we will also have a presentation on kegging/spunding. Cheers!
