@@ -9,4 +9,6 @@ address:
   state: WV
   zipcode: 25302
 image: /static/events/default-club-meeting.jpg
+categories:
+  - club-meeting
 ---
