@@ -9,6 +9,8 @@ address:
   state: WV
   zipcode: 25302
 image: /static/events/hops-glasses_photo-1571767454098-246b94fbcf70.jpeg
+categories:
+  - club-meeting
 ---
 
 
