@@ -3,6 +3,10 @@ title: Coal Country 2024
 image: ""
 date: 2023-10-12T02:40:55.387Z
 ---
-C﻿oal Country Brewers Cup 2024 Entry Form:\
-\
-<https://forms.gle/JXKntkexw21BmkNz7>
+Kanawha Valley Homebrew Club is excited to host the BJCP sanctioned 2024 Coal Country Brewers Cup. The event will be downtown Charleston, WV in March 2024. More details to come.
+
+
+
+Brewer Entry Form Link:
+
+https://forms.gle/QNCR3DyS4UPjkWYUA
