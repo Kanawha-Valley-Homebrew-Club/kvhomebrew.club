@@ -1,15 +1,13 @@
 ---
-title: November Monthly Club Meeting
-subtitle: November Meeting
-event_date: 11-28-2023 18:30 -0500
+title: Coal Country Brewers Cup
+subtitle: Coal Country 2024
+event_date: 03-09-2024 11:00 -0500
 address:
-  name: Charleston Nano Brewery
-  street1: 320 W Washington Street
+  name: ""
+  street1: 162 Summers Street
   city: Charleston
   state: WV
-  zipcode: 25302
-image: /static/events/hops-glasses_photo-1571767454098-246b94fbcf70.jpeg
-categories:
-  - club-meeting
+  zipcode: 25301
+image: /static/events/ccbc-002-.jpg
+categories: []
 ---
-Bring a homebrew to share and join us for our November monthly meeting at Charleston Nano Brewery.  We will hold officer elections so please try and attend in person. See you there!
