@@ -1,23 +1,27 @@
 ---
 title: Coal Country 2024
 image: ""
-date: 2023-11-16T21:16:16.597Z
+date: 2023-11-16T21:22:12.275Z
 ---
 # Competition Details
 
+⦁	**Saturday, March 9th, 2024 @ 11AM**
 
-⦁	Saturday, March 9th, 2024 @ 11AM
 ⦁	162 Summers St, Charleston, WV 25301
+
 ⦁	BJCP Sanctioned Competition - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
-⦁	Registration form and entry instructions will be linked on this page starting **January 15th, 2024**. Registration deadline is February 24th, 2024. 
+
+⦁	Registration form and entry instructions will be linked on this page starting January 15th, 2024. Registration deadline is February 24th, 2024. 
+
 ⦁	$10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category.
+
 ⦁	We will accept shipments for brewers who can't attend in person or have their beer couriered to the event.
+
+
 
 # What to do
 
-
 ⦁	**People's choice porters/stouts contest** will be held at same date/time. This is seperate from the BJCP competition and no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
-
 
 ⦁	**Coal Country Beer Run**. Spend the day visiting our local breweries! KVHBC will provide a card and some club swag if you visit them all! We have several hotels and dozens of restaurants within walking distance from the event if you will be traveling in.
 
@@ -26,11 +30,9 @@ date: 2023-11-16T21:16:16.597Z
 * F﻿ife Street Brewing - <https://fifestreetbrewing.com/>
 * Short Story Brewing Charleston - <https://shortstorybrewing.com/>
 
-
-
 # C﻿ontact Us
 
-C﻿ontact us @ [kvhomebrew@gmail.com](kvhomebrew@gmail.com)with questions or if you'd like to help judge or steward the event.
+Reach us at **kvhomebrew@gmail.com** for questions or if you're available to judge or steward.
 
 
 
@@ -54,6 +56,6 @@ Stout:
 * Stout: 20B - American Stout
 * Stout: 20C - Imperial Stout
 
-Specialty Porters/Stouts
+Specialty Porters/Stouts:
 
 * Any porter/stout not categorized above. I.E. porters or stouts with adjuncts/smoked/spiced. "Base beer" must be porter or stout.
