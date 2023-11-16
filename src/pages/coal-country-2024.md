@@ -1,7 +1,7 @@
 ---
 title: Coal Country 2024
 image: ""
-date: 2023-11-16T21:31:08.439Z
+date: 2023-11-16T21:35:13.650Z
 ---
 # Competition Details
 
@@ -46,15 +46,12 @@ Reach us at **kvhomebrew@gmail.com** for questions or if you're available to jud
 
 # **2﻿021 BJCP Categories**
 
-Porter:
+
 
 * Porter: 9C - Baltic Porter
 * Porter: 13C - English Porter
 * Porter: 20A - American Porter
 * Porter: 27A7 - Pre-Prohibition Porter
-
-Stout:
-
 * Stout: 15B - Irish Stout
 * Stout: 15C - Irish Extra Stout
 * Stout: 16A - Sweet Stout
@@ -63,7 +60,4 @@ Stout:
 * Stout: 16D - Extra Foreign Stout
 * Stout: 20B - American Stout
 * Stout: 20C - Imperial Stout
-
-Specialty Porters/Stouts:
-
 * Any porter/stout not categorized above. I.E. porters or stouts with adjuncts/smoked/spiced. "Base beer" must be porter or stout.
