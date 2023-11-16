@@ -5,8 +5,6 @@ date: 2023-11-16T21:35:13.650Z
 ---
 # Competition Details
 
-
-
 ⦁	**Saturday, March 9th, 2024 @ 11AM**
 
 ⦁	162 Summers St, Charleston, WV 25301
@@ -19,11 +17,7 @@ date: 2023-11-16T21:35:13.650Z
 
 ⦁	We will accept shipments for brewers who can't attend in person or have their beer couriered to the event.
 
-
-
 # What to do
-
-
 
 ⦁	**People's choice porters/stouts contest** will be held at same date/time. This is separate from the BJCP competition and no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
 
@@ -34,19 +28,13 @@ date: 2023-11-16T21:35:13.650Z
 * F﻿ife Street Brewing - <https://fifestreetbrewing.com/>
 * Short Story Brewing Charleston - <https://shortstorybrewing.com/>
 
-
+ ﻿
 
 # Contact Us
 
-
-
 Reach us at **kvhomebrew@gmail.com** for questions or if you're available to judge or steward.
 
-
-
 # **2﻿021 BJCP Categories**
-
-
 
 * Porter: 9C - Baltic Porter
 * Porter: 13C - English Porter
