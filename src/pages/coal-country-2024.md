@@ -21,7 +21,7 @@ date: 2023-11-16T21:38:43.852Z
 
 ⦁	**People's choice porters/stouts contest** will be held at same date/time. This is separate from the BJCP competition and no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
 
-⦁	**Coal Country Beer Run**. Spend the day visiting our local breweries! KVHBC will provide a card and some club swag if you visit them all! We have several hotels and dozens of restaurants within walking distance of the event if you will be traveling in.
+⦁       **Coal Country Scavenger Hunt**. If you want to visit our local breweries, KVHBC will provide a card with the locations and some club swag if you scavenge them all! We have several hotels and dozens of restaurants within walking distance of the event if you will be traveling in.
 
 * Charleston Nano Brewery - <https://charlestonnano.com/>
 * Bad Shepard @ Black Sheep Burritos and Brews - <https://badshepherdbeer.com/>
