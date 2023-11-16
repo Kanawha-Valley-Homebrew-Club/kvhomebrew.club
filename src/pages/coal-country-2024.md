@@ -1,7 +1,7 @@
 ---
 title: Coal Country 2024
 image: ""
-date: 2023-11-16T21:38:43.852Z
+date: 2023-11-16T23:03:44.606Z
 ---
 # Competition Details
 
@@ -28,8 +28,6 @@ date: 2023-11-16T21:38:43.852Z
 * F﻿ife Street Brewing - <https://fifestreetbrewing.com/>
 * Short Story Brewing Charleston - <https://shortstorybrewing.com/>
 
- ﻿
-
 # Contact Us
 
 Reach us at **kvhomebrew@gmail.com** for questions or if you're available to judge or steward.
@@ -48,4 +46,4 @@ Reach us at **kvhomebrew@gmail.com** for questions or if you're available to jud
 * Stout: 16D - Extra Foreign Stout
 * Stout: 20B - American Stout
 * Stout: 20C - Imperial Stout
-* Any porter/stout not categorized above. I.E. porters or stouts with adjuncts/smoked/spiced. "Base beer" must be porter or stout.
+* Specialty: Any porter/stout not categorized above. I.E. porters or stouts with adjuncts/smoked/spiced. "Base beer" must be porter or stout.
