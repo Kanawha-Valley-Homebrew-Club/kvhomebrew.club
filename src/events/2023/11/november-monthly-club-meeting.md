@@ -8,6 +8,6 @@ address:
   city: Charleston
   state: WV
   zipcode: 25301
-image: /static/events/ccbc-002-.jpg
+image: /static/events/thumbnail_img_4004ccchomebrew.jpg
 categories: []
 ---
