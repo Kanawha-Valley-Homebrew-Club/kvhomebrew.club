@@ -40,11 +40,17 @@ date: 2023-11-16T23:03:44.606Z
 
 ⦁	BJCP Sanctioned Competition - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
 
-⦁	Submit 2 minimum (3 preferred)12oz unlabeled/unmarked glass bottles with plain caps. It is preferred to bring beer the day of the even but will accept shipments if needed to 59 Volunteer Ln, Winfield, WV 25213. If shipping to this address it must be received by March 8th.
+⦁	Submit 2 minimum (3 preferred)12oz unlabeled/unmarked glass bottles per entry with plain caps. It is preferred to bring beer the day of the event but will accept shipments if needed to 59 Volunteer Ln, Winfield, WV 25213. If shipping to this address it must be received by March 8th.
 
 ⦁	Complete and attach the bottle entry form to each bottle with a rubber band.
 
-* B﻿ottle entry form: <https://www.bjcp.org/wp-content/uploads/2011/11/SCP_BottleID.pdf>
+* <https://www.bjcp.org/wp-content/uploads/2011/11/SCP_BottleID.pdf>
+
+• Beers will be judged on BJCP guidelines for stylistic accuracy. Example of a BJCP scoresheet is linked here.
+
+* <https://www.bjcp.org/wp-content/uploads/2011/11/SCP_BeerScoreSheet.pdf>
+
+
 
 
 
