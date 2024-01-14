@@ -3,6 +3,17 @@ title: Coal Country 2024
 image: ""
 date: 2023-11-16T23:03:44.606Z
 ---
+# H﻿ow to Register
+
+1. Click link and complete google form. Enter valid email so competition results can be sent and you can edit your entry if needed up until the deadline.
+2. S﻿end payment to paypal linked below. Choose **friends and family** when submitting payment. $10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category. 
+
+R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
+
+P﻿ayPal: <http://paypal.me/KVhomebrew>
+
+# <http://paypal.me/KVhomebrew>
+
 # Competition Details
 
 ⦁	**Saturday, March 9th, 2024 @ 11AM**
@@ -10,8 +21,6 @@ date: 2023-11-16T23:03:44.606Z
 ⦁	162 Summers St, Charleston, WV 25301
 
 ⦁	BJCP Sanctioned Competition - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
-
-⦁	Registration form and entry instructions will be linked on this page starting January 15th, 2024. Registration deadline is February 24th, 2024. 
 
 ⦁	$10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category.
 
