@@ -20,13 +20,15 @@ date: 2023-11-16T23:03:44.606Z
 
 
 
-## R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
+# R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
 
- ﻿  
+#  ﻿  
 
- ﻿ 
+#  ﻿ 
 
-## P﻿ayPal: <http://paypal.me/KVhomebrew>
+# P﻿ayPal:
+
+# <http://paypal.me/KVhomebrew>
 
  ﻿ 
 
@@ -34,9 +36,9 @@ date: 2023-11-16T23:03:44.606Z
 
 # Competition Details
 
-⦁	**Saturday, March 9th, 2024 @ 11AM**
+⦁	When: Saturday, March 9th, 2024 @ 11AM
 
-⦁	162 Summers St, Charleston, WV 25301
+⦁	Where: 62 Summers St, Charleston, WV 25301 
 
 ⦁	BJCP Sanctioned Competition - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
 
