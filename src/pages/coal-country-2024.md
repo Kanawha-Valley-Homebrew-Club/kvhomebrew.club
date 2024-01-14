@@ -1,8 +1,10 @@
 ---
 title: Coal Country 2024
-image: ""
+image: /static/img/lgxkmfu1.png
 date: 2023-11-16T23:03:44.606Z
 ---
+
+
 # H﻿ow to Register
 
 * Click link and complete google form. Enter valid email so competition results can be sent and you can edit your entry if needed up until the deadline. **Registration deadline is February 28th.**
@@ -20,17 +22,15 @@ date: 2023-11-16T23:03:44.606Z
 
 ## R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
 
+ ﻿  
 
-
-
+ ﻿ 
 
 ## P﻿ayPal: <http://paypal.me/KVhomebrew>
 
+ ﻿ 
 
-
-
-
-
+ ﻿ 
 
 # Competition Details
 
@@ -52,7 +52,7 @@ date: 2023-11-16T23:03:44.606Z
 
 
 
-
+ ﻿ 
 
 # What to do
 
