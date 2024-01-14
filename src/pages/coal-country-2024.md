@@ -1,9 +1,9 @@
 ---
 title: Coal Country 2024
-image: /static/img/lgxkmfu1.png
+image: ""
 date: 2023-11-16T23:03:44.606Z
 ---
-
+![](/static/img/lgxkmfu1.png)
 
 # H﻿ow to Register
 
@@ -20,7 +20,9 @@ date: 2023-11-16T23:03:44.606Z
 
 
 
-# R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
+# R﻿egistration Form: 
+
+# <https://forms.gle/BscRp9fGBhKKJr7T8>
 
 #  ﻿  
 
