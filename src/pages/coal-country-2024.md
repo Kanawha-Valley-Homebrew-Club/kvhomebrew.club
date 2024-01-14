@@ -6,11 +6,15 @@ date: 2023-11-16T23:03:44.606Z
 # H﻿ow to Register
 
 1. Click link and complete google form. Enter valid email so competition results can be sent and you can edit your entry if needed up until the deadline.
+
+
 2. S﻿end payment to paypal linked below. Choose **friends and family** when submitting payment. $10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category. 
 
-R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
 
-P﻿ayPal: <http://paypal.me/KVhomebrew>
+
+## R﻿egistration Form: <https://forms.gle/BscRp9fGBhKKJr7T8>
+
+## P﻿ayPal: <http://paypal.me/KVhomebrew>
 
 # <http://paypal.me/KVhomebrew>
 
