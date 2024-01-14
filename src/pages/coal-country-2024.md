@@ -5,10 +5,16 @@ date: 2023-11-16T23:03:44.606Z
 ---
 # H﻿ow to Register
 
-* Click link and complete google form. Enter valid email so competition results can be sent and you can edit your entry if needed up until the deadline.
+* Click link and complete google form. Enter valid email so competition results can be sent and you can edit your entry if needed up until the deadline. **Registration deadline is February 28th.**
 
 
-* S﻿end payment to paypal linked below. Choose **friends and family** when submitting payment. $10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category. 
+* S﻿end payment to paypal linked below. Choose **friends and family** when submitting payment. $10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category. Example - Brewer may submit an american stout and american porter but not two irish stouts.
+
+
+
+* I﻿t is crucial you enter the correct category. Since this is a BJCP competition the judging will be based on stylistic accuracy. Please read below for more info.
+
+
 
 
 
@@ -16,7 +22,11 @@ date: 2023-11-16T23:03:44.606Z
 
 
 
+
+
 ## P﻿ayPal: <http://paypal.me/KVhomebrew>
+
+
 
 
 
@@ -30,13 +40,17 @@ date: 2023-11-16T23:03:44.606Z
 
 ⦁	BJCP Sanctioned Competition - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
 
-⦁	Registration
+⦁	Submit 2 minimum (3 preferred)12oz unlabeled/unmarked glass bottles with plain caps. It is preferred to bring beer the day of the even but will accept shipments if needed to 59 Volunteer Ln, Winfield, WV 25213. If shipping to this address it must be received by March 8th.
 
-⦁	We will accept shipments for brewers who can't attend in person.
+⦁	Complete and attach the bottle entry form to each bottle with a rubber band.
+
+* B﻿ottle entry form: <https://www.bjcp.org/wp-content/uploads/2011/11/SCP_BottleID.pdf>
+
+
 
 # What to do
 
-⦁	**People's choice porters/stouts contest** will be held at same date/time. This is separate from the BJCP competition and no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
+⦁	**People's choice porters/stouts contest** will be held at same date/time. This is separate from the BJCP competition, no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
 
 ⦁       **Coal Country Scavenger Hunt**. If you want to visit our local breweries, KVHBC will provide a card with the locations and some club swag if you scavenge them all! We have several hotels and dozens of restaurants within walking distance of the event if you will be traveling in.
 
