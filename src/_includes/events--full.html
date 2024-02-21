@@ -60,42 +60,6 @@ eleventyComputed:
             <div class="mb-6 markdown-field {{ classes.padding }}">
                 {{ content | safe }}
 
-                {% if 'club-meeting' in categories %}
-                <section class="flex mb-6 border-thin border-black/10 rounded-md bg-beige overflow-hidden" x-data="{ 
-                    info: false,
-                    eventEndTime() { 
-                        var endT = new Date('{{ event_date }}');
-                        endT.setTime(endT.getTime() + (2*60*60*1000));
-                        return endT;
-                    }, 
-                    now() { return new Date(); }
-                }">
-                    <div class="w-3 bg-lime">
-
-                    </div>
-                    <div class="p-4 pr-10 md:pr-18 bg-white">
-                        <div class="flex items-baseline">
-                            {{ component('field-label', { label: 'Tasting Circle' }) }}
-                            <p class="mb-0 ml-4 text-sm"><a href="#" class="opacity-50 no-underline hover:underline" @click="info = !info; event.preventDefault();">What is this?</a></p>
-                        </div>
-                        <div class="">
-                            <template x-if="info == true">
-                                <div>
-                                    <p>The Tasting Circle is our formal process for sharing homebrew and for receiving anonymous feedback from club members. This process occurs during regular club meetings.</p>
-                                    <p>We find this process makes sharing more comfortable for inexperienced brewers, encourages quality feedback, and prepares brewers for competitions. <a href="/contact-us">Join us</a> to see how it's done!</p>
-                                </div>
-                            </template>
-                            <template x-if="Date.parse(eventEndTime()) >= Date.parse(now())">
-                                <p class="mb-0"><a href="https://airtable.com/shr5eVlDpJqwHp4SY">Give Feedback</a></p>
-                            </template>
-                            <template x-if="Date.parse(eventEndTime()) < Date.parse(now())">
-                                <p class="mb-0"><a href="https://airtable.com/shrCKVhC34Es3vJhE/tblsQerytT3Q51ivN">Get the Results</a></p>
-                            </template>
-                        </div>
-                    </div>
-                </section>
-                {% endif %}
-
                 {% include 'blocks/sharing.html' %}
             </div>
 
