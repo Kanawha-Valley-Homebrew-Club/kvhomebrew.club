@@ -10,6 +10,10 @@ address:
 image: /static/events/default-club-meeting.jpg
 categories:
   - club-meeting
+resources:
+  - file: ""
+    title: Meeting Bulletin
+    url: https://docs.google.com/file/d/1TIkWWLqqKoEbK4s-a11CuBejJRzL-CD7/edit?usp=docslist_api&filetype=msword
 ---
 J﻿oin us for our next monthly meeting. Get ready for a night filled with great brews and lively discussions.
 
