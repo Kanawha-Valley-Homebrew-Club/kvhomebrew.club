@@ -5,23 +5,9 @@ date: 2023-11-16T23:03:44.606Z
 ---
 ![](/static/img/lgxkmfu1.png)
 
-# H﻿ow to Register
+# Registration
 
-* Click link and complete google form. Enter valid email so competition results can be sent and you can edit your entry if needed up until the deadline. **Registration deadline is February 28th.**
-* S﻿end payment to paypal linked below. Choose **friends and family** when submitting payment. $10 for 1 entry, $15 for 2 entries. Two entries max per brewer and must be different category. Example - Brewer may submit an american stout and american porter but not two irish stouts.
-* I﻿t is crucial you enter the correct category. Since this is a BJCP competition the judging will be based on stylistic accuracy. Please read below for more info.
-
-# R﻿egistration Form:
-
-# <https://forms.gle/BscRp9fGBhKKJr7T8>
-
-# ﻿
-
-# ﻿
-
-# P﻿ayPal:
-
-# <http://paypal.me/KVhomebrew>
+Registration is closed for the competition. Please reach out to kvhomebrew@gmail.com if you have questions about your entry.
 
 # Competition Details
 
