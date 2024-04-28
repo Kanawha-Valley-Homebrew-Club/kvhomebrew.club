@@ -13,3 +13,7 @@ youtubeId: ""
 D﻿on't miss KVHBC's Monthly Meeting, where we will be learning about Kettle Sours and hosting the thrilling Avalon Malt Competition! Elevate your brewing skills, vie to be the Avalon Malt Champion, and be a part of a vibrant community of beer lovers!
 
 P﻿lease note: No tasting circle this month, we will be tasting the competition entries.
+
+B﻿elow is a link to the April Club Meeting Bulletin:
+
+<https://docs.google.com/document/d/1vWQX-K_LzPlKoMH0m1J0uW3xuMr4spz6/mobilebasic>
