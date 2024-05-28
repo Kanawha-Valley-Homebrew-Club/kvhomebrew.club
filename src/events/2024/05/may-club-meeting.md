@@ -9,6 +9,8 @@ address:
   state: WV
   zipcode: 25302
 image: /static/events/feb-club-meeting-1.jpg
+categories:
+  - club-meeting
 ---
 Join us for our May homebrew meeting! This month, we’ll conduct a BJCP study on 1A and 1B American Lagers, delving into their characteristics and history. As usual, we’ll have a tasting circle for members to share and enjoy homebrew creations. Bring your latest brew, as well as your enthusiasm for brewing! Open to all homebrew enthusiasts—feel free to invite friends. Looking forward to seeing you there and sharing some great brews!
 
