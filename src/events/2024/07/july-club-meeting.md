@@ -1,7 +1,7 @@
 ---
 title: July Club Meeting
 subtitle: The Chemistry of Brewing Beer
-event_date: 07-30-2024 18:30 -0700
+event_date: 07-30-2024 15:30 -0700
 address:
   name: Charleston Nano Brewery
   street1: 320 W. Washington Street
