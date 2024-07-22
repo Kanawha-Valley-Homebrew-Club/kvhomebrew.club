@@ -19,3 +19,9 @@ T﻿asting Circle: Bring your latest homebrew creations to share and receive fee
 Educational Presentation: Dive into the fascinating chemistry of brewing beer. Learn about the chemical processes that transform simple ingredients into our favorite brews and how you can apply this knowledge to enhance your homebrewing.
 
 S﻿ee you there, and happy brewing!
+
+
+
+Below is a link to this month's bulletin:
+
+<https://docs.google.com/document/d/1TIkWWLqqKoEbK4s-a11CuBejJRzL-CD7/edit?usp=sharing&ouid=111132860241640448604&rtpof=true&sd=true>
