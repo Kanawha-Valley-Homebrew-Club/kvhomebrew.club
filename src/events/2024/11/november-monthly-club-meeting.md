@@ -1,5 +1,5 @@
 ---
-title: November Monthly Club Meeting
+title: November Club Meeting
 subtitle: Business Meeting
 event_date: 11-19-2024 18:30 -0500
 address:
