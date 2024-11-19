@@ -24,4 +24,18 @@ Join us for the Kanawha Valley Homebrew Club's annual business meeting, followed
 * **Tasting Circle**\
   Bring your homebrew to share and enjoy feedback from other brewers. Whether you're a seasoned expert or new to brewing, everyone is welcome to participate!
 
+[​
+](<​
+You
+​
+https://docs.google.com/document/d/1TIkWWLqqKoEbK4s-a11CuBejJRzL-CD7/edit?usp=sharing&ouid=111132860241640448604&rtpof=true&sd=true>)B﻿elow is the link for this months meeting bulletin:[
+​](<​
+You
+​
+https://docs.google.com/document/d/1TIkWWLqqKoEbK4s-a11CuBejJRzL-CD7/edit?usp=sharing&ouid=111132860241640448604&rtpof=true&sd=true>)[
+https://docs.google.com/document/d/1TIkWWLqqKoEbK4s-a11CuBejJRzL-CD7/edit?usp=sharing&ouid=111132860241640448604&rtpof=true&sd=true](<​
+You
+​
+https://docs.google.com/document/d/1TIkWWLqqKoEbK4s-a11CuBejJRzL-CD7/edit?usp=sharing&ouid=111132860241640448604&rtpof=true&sd=true>)
+
 <!--EndFragment-->
