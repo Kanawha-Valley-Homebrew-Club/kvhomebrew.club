@@ -34,3 +34,11 @@ Whether you’re a seasoned brewer or just getting started, this meeting is the 
 * Your enthusiasm and ideas for the year ahead!
 
 See you there! Cheers to a fantastic year of brewing ahead! 🍺
+
+
+
+Here is a link to the meeting bulletin:
+
+<https://1drv.ms/w/c/3cb0f1e162bd4da5/ERDK9NH9zUZFgiAAF8UcNagBw5rvhe_2c8Kk-dKXtc6FgQ>
+
+https://1
