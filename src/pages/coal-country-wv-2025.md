@@ -9,6 +9,12 @@ date: 2025-02-01T15:23:40.993Z
 
 Registration is open for Coal Country 2025! This is a BJCP sanctioned competition open to WV home brewers. No commercial brews or commercial collaborations allowed.
 
+E﻿ntry Form Link:
+
+<https://forms.gle/ZYjwhZSRR2aMiM716>
+
+
+
 # Competition Details
 
 ⦁	When: Saturday, March 8th, 2025 @ 11AM
@@ -57,4 +63,6 @@ Reach us at **kvhomebrew@gmail.com** for questions or if you're available to jud
 * Stout: 16D - Extra Foreign Stout
 * Stout: 20B - American Stout
 * Stout: 20C - Imperial Stout
-* Specialty: Any porter/stout not categorized above. I.E. porters or stouts with adjuncts/smoked/spiced. "Base beer" must be porter or stout.
+* Specialty Beer Categories 28-34
+
+  * Specialty beer must represent a porter or stout. Please see the 2021 BJCP beer style guidelines for information on entering a specialty category.
