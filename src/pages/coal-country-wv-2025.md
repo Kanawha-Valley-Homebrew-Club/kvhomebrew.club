@@ -33,8 +33,6 @@ Registration is open for Coal Country 2025! This is a BJCP sanctioned competitio
 
 ⦁	**Local Breweries**
 
-**ocal Breweries w**e have several hotels and dozens of restaurants within walking distance of the event if you will be traveling in.
-
 * Charleston Nano Brewery - <https://charlestonnano.com/>
 * Bad Shepard @ Black Sheep Burritos and Brews - <https://badshepherdbeer.com/>
 * F﻿ife Street Brewing - <https://fifestreetbrewing.com/>
