@@ -13,7 +13,11 @@ E﻿ntry Form Link:
 
 <https://forms.gle/ZYjwhZSRR2aMiM716>
 
+# P﻿ayment
 
+$﻿10 per entry - please choose friends and family on PayPal
+
+<https://www.paypal.com/paypalme/KVhomebrew>
 
 # Competition Details
 
