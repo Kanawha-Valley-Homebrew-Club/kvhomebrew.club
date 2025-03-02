@@ -7,11 +7,7 @@ date: 2025-02-01T15:23:40.993Z
 
 # Registration
 
-Registration is open for Coal Country 2025! This is a BJCP sanctioned competition open to WV home brewers. No commercial brews or commercial collaborations allowed. **Registration closes Saturday March 1st.**
-
-E﻿ntry Form Link:
-
-<https://forms.gle/ZYjwhZSRR2aMiM716>
+**Registration closed Saturday March 1st.**
 
 # P﻿ayment
 
