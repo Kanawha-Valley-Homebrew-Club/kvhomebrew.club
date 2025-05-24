@@ -1,7 +1,7 @@
 ---
 title: " 🍻 May Monthly Meeting – Kanawha Valley Homebrew Club 🍻"
 subtitle: Homebrewer Mythbusting
-event_date: 05-27-2025 18:30 -0700
+event_date: 05-27-2025 18:30 -0400
 address:
   name: Charleston Nano Brewery
   street1: 320 W. Washington Street
