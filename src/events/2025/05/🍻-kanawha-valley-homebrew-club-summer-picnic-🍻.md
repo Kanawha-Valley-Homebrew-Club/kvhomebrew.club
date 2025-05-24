@@ -1,7 +1,7 @@
 ---
 title: 🍻 Kanawha Valley Homebrew Club Summer Picnic 🍻
 subtitle: Time of event to be announced
-event_date: 06-14-2025 12:00 -0700
+event_date: 06-14-2025 12:00 -0400
 address:
   name: Shelter 2, Little Creek Park
   street1: Little Creek Park Rd.
