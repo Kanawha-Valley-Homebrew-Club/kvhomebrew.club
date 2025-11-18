@@ -1,5 +1,5 @@
 ---
-title: November 2025 Monthly Meeting
+title: November Monthly Club Meeting
 subtitle: Off Flavors
 event_date: 11-18-2025 18:30 -0500
 address:
