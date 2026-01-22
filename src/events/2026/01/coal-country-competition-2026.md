@@ -29,7 +29,7 @@ $﻿10 per entry - PayPal or bring cash with entry
 
 # Competition Details
 
-⦁	When: Saturday, March 28th, 2025 @ 11AM
+⦁	When: Saturday, March 28th, 2026 @ 11AM
 
 ⦁	Where: 62 Summers St, Charleston, WV 25301 
 
