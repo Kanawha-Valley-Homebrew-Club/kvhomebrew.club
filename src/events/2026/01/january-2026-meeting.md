@@ -6,7 +6,7 @@ address:
   name: Charleston Nano
   city: Charleston
   state: WV
-  zipcode: 25
+  zipcode: ""
 image: /static/events/default-club-meeting.jpg
 categories:
   - club-meeting
