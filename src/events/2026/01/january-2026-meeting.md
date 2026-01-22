@@ -8,6 +8,8 @@ address:
   state: WV
   zipcode: 25
 image: /static/events/default-club-meeting.jpg
+categories:
+  - club-meeting
 ---
 2026 Kick Off Meeting
 
