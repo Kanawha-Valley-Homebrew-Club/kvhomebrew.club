@@ -9,7 +9,7 @@ address:
   zipcode: 25301
 image: /static/events/image001.png
 categories:
-  - social-event
+  - Competition
 ---
 Entry Drop off - 9:30 am - 10:45 am 
 
