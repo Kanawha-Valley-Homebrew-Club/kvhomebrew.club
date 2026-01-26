@@ -5,7 +5,7 @@ address:
   street1: Home
   city: Charleston
   state: WV
-image: ""
+image: /static/events/beer-bubbles_1571613316887-6f8d5cbf7ef7.jpeg
 categories:
   - social-event
 ---
