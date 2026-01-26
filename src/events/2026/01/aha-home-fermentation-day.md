@@ -6,6 +6,8 @@ address:
   city: Charleston
   state: WV
 image: ""
+categories:
+  - social-event
 ---
 Join the celebration of all things fermentation on Home Fermentation Day! From our favorite homebrews to fermented foods, the American Homebrewers Association is your hub for fermentation. 
 
