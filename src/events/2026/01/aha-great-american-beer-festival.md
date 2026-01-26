@@ -6,6 +6,8 @@ address:
   state: Colorado
   street1: Home
 image: ""
+categories:
+  - Competition
 ---
 Great American Beer Festival Pro-Am competition information in the link below.
 
