@@ -5,23 +5,27 @@ date: 2026-01-17T14:48:52.402Z
 ---
 ![](/static/img/lgxkmfu1.png)
 
-# Use This Link To Register 
+# Use This Link To Register
 
 <https://appalachianbrewclub.com/comp4/>
 
 # P﻿ayment
 
-$﻿10 per entry - PayPal or bring cash with entry
+$﻿10 - 1 Entry 
+
+$﻿15 - 2 Entries
 
 <https://www.paypal.com/paypalme/KVhomebrew>
 
-
-
 # Competition Details
 
-⦁	When: Saturday, March 28th, 2025 @ 11AM
+⦁	BJCP Competition
+	Drop Off: Sat March 28th 9:30-10:30 AM (@ Bad Shepard)
+	Judging: Sat March 28th 11AM - 3PM (@ Fife St)
 
-⦁	Where: 62 Summers St, Charleston, WV 25301 
+⦁	People's Choice (Non-BJCP)
+	Sat March 28th 1:30-3:00 PM
+	Black Sheep/Bad Shepherd Brewing Co
 
 ⦁	BJCP Sanctioned Competition - WV Brewers - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
 
@@ -37,7 +41,7 @@ $﻿10 per entry - PayPal or bring cash with entry
 
 # What to do
 
-⦁	**People's choice porters/stouts contest** will be held at same date/time. This is separate from the BJCP competition, no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
+⦁	**People's choice porters/stouts contest.** This is separate from the BJCP competition, no registration or entry fee required! Bring your best homebrew (as long as it falls under porter/stout base) and hang out with other homebrewers from our state.
 
 ⦁	**Local Breweries**
 
