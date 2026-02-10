@@ -26,3 +26,7 @@ https://brilliantstream.com
 
 
 This competition will take place at our April Meeting. We have enough Avalon Malt for 10 brewers to compete. Sign ups will be first come first serve. Click the link below to sign up!
+
+
+
+https://www.signupgenius.com/go/10C044FAEAF28A7FDC43-62297404-keeneland?fbclid=IwY2xjawP4QuxleHRuA2FlbQIxMABicmlkETFzWVprOWxQZzg5V3VTdnhac3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHlE1p757_eBVvccY0vJGyDTQBkXP10KSRgw086zp4GCmB2HiiyjyiCSpliTj_aem_MP4gGfn2CpMZlTJ7Lttfrw#/
