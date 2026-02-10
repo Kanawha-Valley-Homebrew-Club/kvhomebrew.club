@@ -13,6 +13,8 @@ categories:
 ---
 Keeneland Spring Lager Clone competition is happening with the help of Riverbend Malt - Avalon Malt Donation facilitated by Charles Bockway and clone recipe from Dakota Farmer with Mountain State Beverage. Big Thank You for their support of the club!
 
+
+
 Go check out Riverbend Malt website!
 
 https://riverbendmalt.com
@@ -21,4 +23,6 @@ Go check out Charles Bockway website!
 
 https://brilliantstream.com
 
-This competition will take place at our April Meeting. We have enough Avalon Malt for 10 brewers to compete. Sign ups will be first come first serve. Sign up link will be posted tomorrow at 7pm est for anyone interested in competing.
+
+
+This competition will take place at our April Meeting. We have enough Avalon Malt for 10 brewers to compete. Sign ups will be first come first serve. Click the link below to sign up!
