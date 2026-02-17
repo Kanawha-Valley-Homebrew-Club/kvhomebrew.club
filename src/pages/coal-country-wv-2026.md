@@ -27,7 +27,7 @@ $﻿15 - 2 Entries
 	Sat March 28th 1:30-3:00 PM
 	Black Sheep/Bad Shepherd Brewing Co
 
-⦁	BJCP Sanctioned Competition - WV Brewers - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
+⦁	BJCP Sanctioned Competition - **Porters, Stouts, Specialty Porters/Stouts** - 2021 Style Guidelines.
 
 ⦁	2 minimum 12oz unlabeled/unmarked glass bottles per entry with plain caps. Submit beer the day of the event. We will have a check-in station setup at the address listed.
 
