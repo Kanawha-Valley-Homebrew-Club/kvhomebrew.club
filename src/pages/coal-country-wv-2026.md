@@ -3,8 +3,6 @@ title: Coal Country 2026
 image: ""
 date: 2026-01-17T14:48:52.402Z
 ---
-![](/static/img/lgxkmfu1.png)
-
 # Use This Link To Register
 
 <https://appalachianbrewclub.com/comp4/>
