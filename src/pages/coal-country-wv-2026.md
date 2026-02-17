@@ -1,6 +1,6 @@
 ---
 title: Coal Country 2026
-image: ""
+image: /static/img/lgxkmfu1.png
 date: 2026-01-17T14:48:52.402Z
 ---
 # Use This Link To Register
