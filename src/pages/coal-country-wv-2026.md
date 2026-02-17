@@ -1,5 +1,5 @@
 ---
-title: Coal Country WV 2026
+title: Coal Country 2026
 image: ""
 date: 2026-01-17T14:48:52.402Z
 ---
