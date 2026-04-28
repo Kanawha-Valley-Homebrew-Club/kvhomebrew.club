@@ -13,4 +13,4 @@ Grain Buy Link below! Please fill out if you are interested in buying with the g
 
 Any questions please email: Matt Brummond at mr.ascii@outlook.com
 
-https://my.microsoftpersonalcontent.com/personal/81346f7a033d110c/Documents/Desktop/2026%20KVHC%20Group%20Grain%20buy%20ESTIMATES.xlsx
+https://docs.google.com/spreadsheets/d/1n5YochYI68p4t_HFco0-AT6r8YQ0_S-Cj6GxVq-EK0M/edit?usp=sharing
