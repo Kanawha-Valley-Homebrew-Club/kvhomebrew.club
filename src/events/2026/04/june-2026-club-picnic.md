@@ -6,7 +6,8 @@ address:
   city: Charleston
   state: WV
 image: /static/events/beer.jpg
-youtubeId: https://www.signupgenius.com/go/10C044FAEAF28A7FDC43-64459207-kvhc
+youtubeId: ""
 categories:
   - social-event
 ---
+https://www.signupgenius.com/go/10C044FAEAF28A7FDC43-64459207-kvhc
